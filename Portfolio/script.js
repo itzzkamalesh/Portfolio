@@ -1,39 +1,41 @@
-// Intersection Observer for Sliding Animations
-const observerOptions = {
-    threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
-};
-
-const observer = new IntersectionObserver((entries) => {
+// Intersection Observer for Slide-up Animations
+const revealCallback = (entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
         }
     });
-}, observerOptions);
+};
 
-// Target all elements with the .reveal class
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const observer = new IntersectionObserver(revealCallback, {
+    threshold: 0.1
+});
 
-// Drag to scroll functionality for Certificate Slider
-const slider = document.querySelector('.slider-wrapper');
+document.querySelectorAll('.reveal').forEach(section => {
+    observer.observe(section);
+});
+
+// Horizontal Drag-to-Scroll for Certificates
+const slider = document.querySelector('.slider-container');
 let isDown = false;
 let startX;
 let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
-    slider.classList.add('active');
+    slider.style.cursor = 'grabbing';
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
 });
 
 slider.addEventListener('mouseleave', () => {
     isDown = false;
+    slider.style.cursor = 'grab';
 });
 
 slider.addEventListener('mouseup', () => {
     isDown = false;
+    slider.style.cursor = 'grab';
 });
 
 slider.addEventListener('mousemove', (e) => {
@@ -44,14 +46,6 @@ slider.addEventListener('mousemove', (e) => {
     slider.scrollLeft = scrollLeft - walk;
 });
 
-// Smooth Scroll for any internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        if(this.getAttribute('href') !== "#") {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Add touch support for mobile "hand-sliding"
+slider.addEventListener('touchstart', () => { isDown = true; });
+slider.addEventListener('touchend', () => { isDown = false; });
