@@ -1,51 +1,42 @@
-// Intersection Observer for Slide-up Animations
-const revealCallback = (entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+// Function to handle the slide-up animation on scroll
+const revealOnScroll = () => {
+    const reveals = document.querySelectorAll('.slide-up');
+    const windowHeight = window.innerHeight;
+    const revealPoint = 100;
+
+    reveals.forEach(el => {
+        const revealTop = el.getBoundingClientRect().top;
+        if (revealTop < windowHeight - revealPoint) {
+            el.classList.add('active');
         }
     });
 };
 
-const observer = new IntersectionObserver(revealCallback, {
-    threshold: 0.1
-});
+// Run on scroll
+window.addEventListener('scroll', revealOnScroll);
 
-document.querySelectorAll('.reveal').forEach(section => {
-    observer.observe(section);
-});
+// Run on load to reveal hero section immediately
+window.addEventListener('DOMContentLoaded', revealOnScroll);
 
-// Horizontal Drag-to-Scroll for Certificates
-const slider = document.querySelector('.slider-container');
+// Optional: Smooth Drag-to-Scroll for Certificates
+const slider = document.querySelector('.cert-slider');
 let isDown = false;
 let startX;
 let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
-    slider.style.cursor = 'grabbing';
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
 });
 
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.style.cursor = 'grab';
-});
-
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.style.cursor = 'grab';
-});
+slider.addEventListener('mouseleave', () => isDown = false);
+slider.addEventListener('mouseup', () => isDown = false);
 
 slider.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll speed
+    const walk = (x - startX) * 2;
     slider.scrollLeft = scrollLeft - walk;
 });
-
-// Add touch support for mobile "hand-sliding"
-slider.addEventListener('touchstart', () => { isDown = true; });
-slider.addEventListener('touchend', () => { isDown = false; });
