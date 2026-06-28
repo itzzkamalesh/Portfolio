@@ -5,144 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamalesh R | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Icons and Fonts -->
+    <!-- Simple, high-quality font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">KAMALESH<span>.R</span></div>
-            <!-- Replace # with your actual file path -->
-            <a href="#" class="download-btn" download>
-                <i class="fas fa-file-download"></i> Resume
-            </a>
+    <nav>
+        <div class="nav-content">
+            <span class="logo">KR</span>
+            <!-- Update the # with your actual file link -->
+            <a href="#" class="btn-resume" download>Resume <i class="fa-solid fa-arrow-down"></i></a>
         </div>
     </nav>
 
-    <header class="hero reveal">
-        <div class="hero-content">
-            <span class="badge">AI & ML Engineer</span>
-            <h1>Turning Data Into <br><span class="highlight">Intelligence</span></h1>
-            <p>Second-year B.E. CSE student at Jeppiaar Engineering College. Specializing in Artificial Intelligence and Machine Learning with a passion for software development.</p>
-            <div class="hero-contact">
-                <a href="mailto:itzzkamalesh@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/kamaleshram"><i class="fab fa-linkedin"></i></a>
-                <a href="tel:+917010486764"><i class="fas fa-phone"></i></a>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        
-        <section class="main-grid">
-            <!-- Left Column: About & Education -->
-            <div class="col-left">
-                <div class="card reveal">
-                    <h3><i class="fas fa-user-circle"></i> About Me</h3>
-                    <p>I am a passionate learner seeking internship opportunities to gain practical experience. I focus on building real-world projects that contribute to the evolving field of AI.</p>
-                    <div class="lang-box">
-                        <span><strong>English</strong> (Professional)</span>
-                        <span><strong>Tamil</strong> (Native)</span>
-                    </div>
-                </div>
-
-                <div class="card reveal">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="edu-item">
-                        <h4>Jeppiaar Engineering College</h4>
-                        <p class="sub">B.E - CSE (AI & ML) | 2025 - 2029</p>
-                    </div>
-                    <div class="edu-item">
-                        <h4>NSVV Boys Hr Sec School</h4>
-                        <p class="sub">HSC: 91% | SSLC: 88%</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column: Skills -->
-            <div class="col-right">
-                <div class="card reveal">
-                    <h3><i class="fas fa-code"></i> Technical Arsenal</h3>
-                    <div class="skill-group">
-                        <span class="tag">Python</span>
-                        <span class="tag">C / C++</span>
-                        <span class="tag">Git & GitHub</span>
-                        <span class="tag">HTML5 & CSS3</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">MS Office</span>
-                    </div>
-                    <h3 style="margin-top:20px;"><i class="fas fa-lightbulb"></i> Soft Skills</h3>
-                    <div class="skill-group">
-                        <span class="tag soft">Problem Solving</span>
-                        <span class="tag soft">Team Work</span>
-                        <span class="tag soft">Quick Learner</span>
-                    </div>
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <h1>Kamalesh R</h1>
+            <p class="subtitle">AI & Machine Learning Student</p>
+            <p class="description">
+                Building the future of software through Artificial Intelligence. 
+                Currently a Second-year B.E. student at Jeppiaar Engineering College.
+            </p>
+            <div class="contact-icons">
+                <a href="mailto:itzzkamalesh@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/kamaleshram"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="tel:+917010486764"><i class="fa-solid fa-phone"></i></a>
+                <span class="location"><i class="fa-solid fa-location-dot"></i> Chennai</span>
             </div>
         </section>
 
-        <!-- Projects / Experience Section -->
-        <section id="experience" class="reveal">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="p-icon"><i class="fas fa-robot"></i></div>
-                    <h4>ML Fundamentals</h4>
-                    <p>Exploring data preprocessing and predictive modeling using Python and Scikit-Learn.</p>
+        <!-- Experience/Projects -->
+        <section class="section reveal">
+            <h2 class="label">Featured Work</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>Machine Learning Models</h3>
+                        <p>Researching and developing fundamental ML algorithms using Python.</p>
+                    </div>
+                    <span class="year">2024</span>
                 </div>
-                <div class="project-card">
-                    <div class="p-icon"><i class="fas fa-globe"></i></div>
-                    <h4>Responsive Web Design</h4>
-                    <p>Building modern, high-performance portfolio websites and UI components.</p>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h3>Frontend Architecture</h3>
+                        <p>Crafting clean, responsive user interfaces with HTML, CSS, and JS.</p>
+                    </div>
+                    <span class="year">2023</span>
                 </div>
             </div>
         </section>
 
         <!-- Certificate Slider -->
-        <section id="certificates" class="reveal">
-            <h2 class="section-title">Certifications</h2>
-            <div class="slider-wrapper">
-                <div class="cert-slider">
-                    <!-- Card 1 -->
-                    <a href="https://www.cloudskillsboost.google/" target="_blank" class="cert-item">
-                        <img src="https://via.placeholder.com/400x280/1a1a1a/ffffff?text=Google+Gen+AI" alt="Google Certificate">
-                        <div class="cert-info">
-                            <h4>Intro to Generative AI</h4>
-                            <p>Google Cloud</p>
+        <section class="section reveal">
+            <h2 class="label">Certifications</h2>
+            <div class="slider-container">
+                <div class="slider-track">
+                    <!-- Replace the href with your certificate link and img src with your image -->
+                    <a href="https://www.cloudskillsboost.google/" target="_blank" class="cert-card">
+                        <img src="https://via.placeholder.com/600x400/f3f3f3/000000?text=Google+Gen+AI" alt="Google">
+                        <div class="cert-meta">
+                            <h4>Generative AI</h4>
+                            <span>Google Cloud</span>
                         </div>
                     </a>
-                    <!-- Card 2 -->
-                    <a href="#" target="_blank" class="cert-item">
-                        <img src="https://via.placeholder.com/400x280/1a1a1a/ffffff?text=Infosys+AI+ML" alt="Infosys Certificate">
-                        <div class="cert-info">
-                            <h4>Fundamentals of AI & ML</h4>
-                            <p>Infosys</p>
+                    <a href="#" target="_blank" class="cert-card">
+                        <img src="https://via.placeholder.com/600x400/f3f3f3/000000?text=Infosys+AI+ML" alt="Infosys">
+                        <div class="cert-meta">
+                            <h4>Fundamentals of AI</h4>
+                            <span>Infosys</span>
                         </div>
                     </a>
-                    <!-- Card 3 -->
-                    <a href="#" target="_blank" class="cert-item">
-                        <img src="https://via.placeholder.com/400x280/1a1a1a/ffffff?text=Amazon+ML" alt="Amazon Certificate">
-                        <div class="cert-info">
-                            <h4>ML Foundations</h4>
-                            <p>Amazon</p>
+                    <a href="#" target="_blank" class="cert-card">
+                        <img src="https://via.placeholder.com/600x400/f3f3f3/000000?text=Amazon+ML" alt="Amazon">
+                        <div class="cert-meta">
+                            <h4>Machine Learning</h4>
+                            <span>Amazon</span>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- Technical & Education Grid -->
+        <section class="grid-section reveal">
+            <div class="grid-col">
+                <h2 class="label">Technical</h2>
+                <ul class="clean-list">
+                    <li>Python & C++</li>
+                    <li>Machine Learning</li>
+                    <li>Git / GitHub</li>
+                    <li>HTML & CSS</li>
+                </ul>
+            </div>
+            <div class="grid-col">
+                <h2 class="label">Education</h2>
+                <div class="edu-box">
+                    <p><strong>Jeppiaar Engineering College</strong></p>
+                    <p class="small">B.E - CSE (AI & ML) • 2025-2029</p>
+                    <br>
+                    <p><strong>NSVV Boys School</strong></p>
+                    <p class="small">HSC (91%) • SSLC (88%)</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="reveal">
-        <div class="footer-content">
-            <p>Designed by Kamalesh R &copy; 2023</p>
-            <div class="socials">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
+        <p>&copy; 2023 Kamalesh R. Hand-coded with care.</p>
     </footer>
 
     <script src="script.js"></script>
