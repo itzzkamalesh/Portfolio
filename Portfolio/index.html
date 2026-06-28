@@ -5,116 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamalesh R | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Simple, high-quality font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter for professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <div class="nav-content">
-            <span class="logo">KR</span>
-            <!-- Update the # with your actual file link -->
-            <a href="#" class="btn-resume" download>Resume <i class="fa-solid fa-arrow-down"></i></a>
-        </div>
+    <nav class="navbar">
+        <div class="logo">K<span>.</span></div>
+        <a href="resume.pdf" class="btn-resume" download>Download Resume</a>
     </nav>
 
+    <header class="hero slide-up">
+        <p class="intro-text">Hello, I'm</p>
+        <h1>KAMALESH R</h1>
+        <h2>AI & ML Student <span>/</span> Developer</h2>
+        <p class="hero-bio">Building intelligent solutions and exploring the future of Machine Learning. Currently a 2nd-year CSE student at Jeppiaar Engineering College.</p>
+    </header>
+
     <main>
-        <!-- Hero Section -->
-        <section class="hero reveal">
-            <h1>Kamalesh R</h1>
-            <p class="subtitle">AI & Machine Learning Student</p>
-            <p class="description">
-                Building the future of software through Artificial Intelligence. 
-                Currently a Second-year B.E. student at Jeppiaar Engineering College.
-            </p>
-            <div class="contact-icons">
-                <a href="mailto:itzzkamalesh@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/kamaleshram"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="tel:+917010486764"><i class="fa-solid fa-phone"></i></a>
-                <span class="location"><i class="fa-solid fa-location-dot"></i> Chennai</span>
+        <!-- About & Skills Section -->
+        <section class="grid-section slide-up">
+            <div class="about">
+                <h3>About</h3>
+                <p>Focused on Artificial Intelligence, Machine Learning, and software development. I enjoy solving complex problems and turning data into actionable insights.</p>
+            </div>
+            <div class="skills">
+                <h3>Technical Arsenal</h3>
+                <div class="skill-list">
+                    <span>Python</span> <span>C/C++</span> <span>HTML/CSS</span>
+                    <span>Git</span> <span>Machine Learning</span> <span>MS Office</span>
+                </div>
             </div>
         </section>
 
-        <!-- Experience/Projects -->
-        <section class="section reveal">
-            <h2 class="label">Featured Work</h2>
+        <!-- Projects Section -->
+        <section class="section slide-up">
+            <h3>Featured Projects</h3>
             <div class="project-list">
                 <div class="project-item">
-                    <div class="project-info">
-                        <h3>Machine Learning Models</h3>
-                        <p>Researching and developing fundamental ML algorithms using Python.</p>
+                    <div class="p-year">2024</div>
+                    <div class="p-info">
+                        <h4>ML Fundamentals</h4>
+                        <p>Core data preprocessing and predictive modeling implementations.</p>
                     </div>
-                    <span class="year">2024</span>
                 </div>
                 <div class="project-item">
-                    <div class="project-info">
-                        <h3>Frontend Architecture</h3>
-                        <p>Crafting clean, responsive user interfaces with HTML, CSS, and JS.</p>
+                    <div class="p-year">2024</div>
+                    <div class="p-info">
+                        <h4>Portfolio Architecture</h4>
+                        <p>Building high-performance, minimalist web interfaces.</p>
                     </div>
-                    <span class="year">2023</span>
                 </div>
             </div>
         </section>
 
-        <!-- Certificate Slider -->
-        <section class="section reveal">
-            <h2 class="label">Certifications</h2>
-            <div class="slider-container">
-                <div class="slider-track">
-                    <!-- Replace the href with your certificate link and img src with your image -->
-                    <a href="https://www.cloudskillsboost.google/" target="_blank" class="cert-card">
-                        <img src="https://via.placeholder.com/600x400/f3f3f3/000000?text=Google+Gen+AI" alt="Google">
-                        <div class="cert-meta">
-                            <h4>Generative AI</h4>
-                            <span>Google Cloud</span>
-                        </div>
-                    </a>
-                    <a href="#" target="_blank" class="cert-card">
-                        <img src="https://via.placeholder.com/600x400/f3f3f3/000000?text=Infosys+AI+ML" alt="Infosys">
-                        <div class="cert-meta">
-                            <h4>Fundamentals of AI</h4>
-                            <span>Infosys</span>
-                        </div>
-                    </a>
-                    <a href="#" target="_blank" class="cert-card">
-                        <img src="https://via.placeholder.com/600x400/f3f3f3/000000?text=Amazon+ML" alt="Amazon">
-                        <div class="cert-meta">
-                            <h4>Machine Learning</h4>
-                            <span>Amazon</span>
-                        </div>
-                    </a>
-                </div>
+        <!-- Slidable Certificates Section -->
+        <section class="section slide-up">
+            <h3>Certifications</h3>
+            <div class="cert-slider">
+                <a href="#" class="cert-card">
+                    <img src="https://via.placeholder.com/600x400?text=Google+Gen+AI" alt="Cert">
+                    <div class="cert-label">Google - Generative AI</div>
+                </a>
+                <a href="#" class="cert-card">
+                    <img src="https://via.placeholder.com/600x400?text=Infosys+AI+ML" alt="Cert">
+                    <div class="cert-label">Infosys - Fundamentals</div>
+                </a>
+                <a href="#" class="cert-card">
+                    <img src="https://via.placeholder.com/600x400?text=Amazon+ML" alt="Cert">
+                    <div class="cert-label">Amazon - ML Foundations</div>
+                </a>
             </div>
         </section>
 
-        <!-- Technical & Education Grid -->
-        <section class="grid-section reveal">
-            <div class="grid-col">
-                <h2 class="label">Technical</h2>
-                <ul class="clean-list">
-                    <li>Python & C++</li>
-                    <li>Machine Learning</li>
-                    <li>Git / GitHub</li>
-                    <li>HTML & CSS</li>
-                </ul>
+        <!-- Contact Section -->
+        <footer class="slide-up">
+            <h3>Get In Touch</h3>
+            <div class="contact-links">
+                <a href="mailto:itzzkamalesh@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/kamaleshram"><i class="fab fa-linkedin"></i></a>
+                <a href="tel:+917010486764"><i class="fas fa-phone"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
             </div>
-            <div class="grid-col">
-                <h2 class="label">Education</h2>
-                <div class="edu-box">
-                    <p><strong>Jeppiaar Engineering College</strong></p>
-                    <p class="small">B.E - CSE (AI & ML) • 2025-2029</p>
-                    <br>
-                    <p><strong>NSVV Boys School</strong></p>
-                    <p class="small">HSC (91%) • SSLC (88%)</p>
-                </div>
-            </div>
-        </section>
+            <p class="copyright">Chennai, India • 2024</p>
+        </footer>
     </main>
-
-    <footer class="reveal">
-        <p>&copy; 2023 Kamalesh R. Hand-coded with care.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
