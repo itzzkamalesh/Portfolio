@@ -1,46 +1,57 @@
-// Function to handle the Scroll to Top button visibility
-window.onscroll = function() {
-    scrollFunction();
+// Intersection Observer for Sliding Animations
+const observerOptions = {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
 };
 
-function scrollFunction() {
-    const btn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        btn.style.display = "block";
-    } else {
-        btn.style.display = "none";
-    }
-}
-
-// Scroll to top smooth behavior
-document.getElementById("scrollTopBtn").addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
     });
+}, observerOptions);
+
+// Target all elements with the .reveal class
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Drag to scroll functionality for Certificate Slider
+const slider = document.querySelector('.slider-wrapper');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
 });
 
-// Add some subtle animation to sections on load
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-    
-    const observerOptions = {
-        threshold: 0.1
-    };
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+});
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+});
 
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'all 0.6s ease-out';
-        observer.observe(section);
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+// Smooth Scroll for any internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        if(this.getAttribute('href') !== "#") {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
