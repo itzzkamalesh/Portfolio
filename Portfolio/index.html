@@ -5,94 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamalesh R | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts: Inter for professional look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <!-- FontAwesome for clean icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">K<span>.</span></div>
-        <a href="resume.pdf" class="btn-resume" download>Download Resume</a>
-    </nav>
-
-    <header class="hero slide-up">
-        <p class="intro-text">Hello, I'm</p>
-        <h1>KAMALESH R</h1>
-        <h2>AI & ML Student <span>/</span> Developer</h2>
-        <p class="hero-bio">Building intelligent solutions and exploring the future of Machine Learning. Currently a 2nd-year CSE student at Jeppiaar Engineering College.</p>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Kamalesh R</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- About & Skills Section -->
-        <section class="grid-section slide-up">
-            <div class="about">
-                <h3>About</h3>
-                <p>Focused on Artificial Intelligence, Machine Learning, and software development. I enjoy solving complex problems and turning data into actionable insights.</p>
-            </div>
-            <div class="skills">
-                <h3>Technical Arsenal</h3>
-                <div class="skill-list">
-                    <span>Python</span> <span>C/C++</span> <span>HTML/CSS</span>
-                    <span>Git</span> <span>Machine Learning</span> <span>MS Office</span>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-content">
+            <h2>Hi, I'm Kamalesh</h2>
+            <p>Second-Year B.E. CSE (AI & ML) Student</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h3 class="section-title">About Me</h3>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am a dedicated second-year B.E. CSE (AI & ML) student with a strong passion for Artificial Intelligence, Machine Learning, and software development. I am constantly eager to explore new technologies and am actively seeking internship opportunities to gain hands-on, practical experience while driving value for real-world projects.</p>
+                </div>
+                <div class="focus-box">
+                    <h4>Current Focus</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-code-branch"></i> Git & GitHub</li>
+                        <li><i class="fa-solid fa-brain"></i> Machine Learning Fundamentals</li>
+                        <li><i class="fa-solid fa-laptop-code"></i> HTML & CSS</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section class="section slide-up">
-            <h3>Featured Projects</h3>
-            <div class="project-list">
-                <div class="project-item">
-                    <div class="p-year">2024</div>
-                    <div class="p-info">
-                        <h4>ML Fundamentals</h4>
-                        <p>Core data preprocessing and predictive modeling implementations.</p>
+    <!-- Education Section -->
+    <section id="education" class="section-padding bg-light">
+        <div class="container">
+            <h3 class="section-title">Education</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">2025 - 2029 (Present)</span>
+                    <h4>B.E - CSE (Artificial Intelligence & Machine Learning)</h4>
+                    <p class="institution">Jeppiaar Engineering College</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">2025</span>
+                    <h4>Higher Secondary Certificate (HSC) — 91%</h4>
+                    <p class="institution">NSVV Boys Hr Sec School</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">2023</span>
+                    <h4>Secondary School Leaving Certificate (SSLC) — 88%</h4>
+                    <p class="institution">NSVV Boys Hr Sec School</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h3 class="section-title">Skills & Languages</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Technical</h4>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">HTML & CSS</span>
+                        <span class="tag">MS Office</span>
                     </div>
                 </div>
-                <div class="project-item">
-                    <div class="p-year">2024</div>
-                    <div class="p-info">
-                        <h4>Portfolio Architecture</h4>
-                        <p>Building high-performance, minimalist web interfaces.</p>
+                <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <div class="tags">
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Team Work</span>
+                        <span class="tag">Time Management</span>
+                        <span class="tag">Quick Learner</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="tags">
+                        <span class="tag">Tamil (Native)</span>
+                        <span class="tag">English (Professional)</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Slidable Certificates Section -->
-        <section class="section slide-up">
-            <h3>Certifications</h3>
-            <div class="cert-slider">
-                <a href="#" class="cert-card">
-                    <img src="https://via.placeholder.com/600x400?text=Google+Gen+AI" alt="Cert">
-                    <div class="cert-label">Google - Generative AI</div>
-                </a>
-                <a href="#" class="cert-card">
-                    <img src="https://via.placeholder.com/600x400?text=Infosys+AI+ML" alt="Cert">
-                    <div class="cert-label">Infosys - Fundamentals</div>
-                </a>
-                <a href="#" class="cert-card">
-                    <img src="https://via.placeholder.com/600x400?text=Amazon+ML" alt="Cert">
-                    <div class="cert-label">Amazon - ML Foundations</div>
-                </a>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding bg-light">
+        <div class="container">
+            <h3 class="section-title">Certifications</h3>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <i class="fa-brands fa-google cert-icon"></i>
+                    <h4>Introduction to Generative AI</h4>
+                    <p>Google</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fa-solid fa-graduation-cap cert-icon"></i>
+                    <h4>Fundamentals of AI & ML</h4>
+                    <p>Infosys</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fa-brands fa-aws cert-icon"></i>
+                    <h4>Fundamentals of ML and AI</h4>
+                    <p>Amazon</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <footer class="slide-up">
-            <h3>Get In Touch</h3>
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h3 class="section-title">Get In Touch</h3>
             <div class="contact-links">
-                <a href="mailto:itzzkamalesh@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/kamaleshram"><i class="fab fa-linkedin"></i></a>
-                <a href="tel:+917010486764"><i class="fas fa-phone"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:itzkamalesh@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i> itzzkamalesh@gmail.com
+                </a>
+                <a href="tel:+917010486764" class="contact-item">
+                    <i class="fa-solid fa-phone"></i> +91 70104 86764
+                </a>
+                <a href="https://linkedin.com/in/kamaleshram" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i> linkedin.com/in/kamaleshram
+                </a>
+                <span class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i> Chennai, India
+                </span>
             </div>
-            <p class="copyright">Chennai, India • 2024</p>
-        </footer>
-    </main>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kamalesh R. Built with clean HTML & CSS.</p>
+    </footer>
+
 </body>
 </html>
