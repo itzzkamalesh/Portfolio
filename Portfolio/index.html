@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kamalesh R | Portfolio</title>
 
+<meta name="description" content="Portfolio of Kamalesh R">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,85 +27,146 @@ scroll-behavior:smooth;
 font-family:'Poppins',sans-serif;
 }
 
-body{
-background:#0f172a;
-color:white;
-overflow-x:hidden;
+:root{
+
+--bg:#0F172A;
+--card:#1E293B;
+--primary:#3B82F6;
+--text:#F8FAFC;
+--secondary:#CBD5E1;
+--muted:#94A3B8;
+
 }
 
-section{
-padding:90px 10%;
+body{
+
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+
+}
+
+img{
+max-width:100%;
 }
 
 a{
+
 text-decoration:none;
+
 }
 
 ul{
+
 list-style:none;
+
 }
 
-/* Navigation */
+section{
+
+padding:70px 9%;
+
+}
+
+.container{
+
+max-width:1200px;
+margin:auto;
+
+}
+
+/*======================
+NAVBAR
+======================*/
 
 nav{
 
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
-padding:20px 10%;
+
+padding:18px 9%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
-background:rgba(15,23,42,.9);
+background:rgba(15,23,42,.95);
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 
-z-index:1000;
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,.05);
 
 }
 
 .logo{
 
-font-size:28px;
+font-size:30px;
+
 font-weight:700;
+
 color:white;
 
 }
 
 .logo span{
 
-color:#3b82f6;
+color:var(--primary);
 
 }
 
 nav ul{
 
 display:flex;
-gap:30px;
+
+gap:35px;
 
 }
 
 nav ul li a{
 
 color:white;
+
+font-size:15px;
+
 font-weight:500;
+
 transition:.3s;
 
 }
 
 nav ul li a:hover{
 
-color:#3b82f6;
+color:var(--primary);
 
 }
 
-/* Hero */
+/* Mobile Menu */
+
+.menu-btn{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+/*======================
+HERO
+======================*/
 
 .hero{
 
-min-height:100vh;
+min-height:88vh;
 
 display:flex;
 
@@ -109,7 +176,13 @@ align-items:center;
 
 text-align:center;
 
-flex-direction:column;
+padding-top:100px;
+
+}
+
+.hero-content{
+
+max-width:850px;
 
 }
 
@@ -117,21 +190,25 @@ flex-direction:column;
 
 font-size:60px;
 
-margin-bottom:20px;
+margin-bottom:15px;
+
+line-height:1.2;
 
 }
 
-.hero h1 span{
+.hero span{
 
-color:#3b82f6;
+color:var(--primary);
 
 }
 
 .hero h3{
 
-font-size:26px;
+font-size:24px;
 
-color:#cbd5e1;
+font-weight:500;
+
+color:var(--secondary);
 
 margin-bottom:20px;
 
@@ -139,33 +216,33 @@ margin-bottom:20px;
 
 .hero p{
 
-max-width:700px;
+font-size:17px;
 
-line-height:1.8;
+line-height:1.9;
 
-color:#94a3b8;
+color:var(--muted);
 
 margin-bottom:40px;
 
 }
 
-.buttons{
+.button-group{
 
 display:flex;
 
+justify-content:center;
+
 gap:20px;
+
+flex-wrap:wrap;
 
 }
 
 .btn{
 
-padding:15px 35px;
-
-background:#3b82f6;
+padding:15px 34px;
 
 border-radius:10px;
-
-color:white;
 
 font-weight:600;
 
@@ -173,49 +250,84 @@ transition:.3s;
 
 }
 
+.btn-primary{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+.btn-secondary{
+
+border:2px solid var(--primary);
+
+color:white;
+
+}
+
 .btn:hover{
 
-transform:translateY(-5px);
+transform:translateY(-4px);
 
 }
 
-.btn-outline{
-
-background:transparent;
-
-border:2px solid #3b82f6;
-
-}
-
-/* About */
+/*======================
+SECTION TITLES
+======================*/
 
 .section-title{
 
-font-size:40px;
-
-margin-bottom:40px;
+font-size:38px;
 
 text-align:center;
 
-}
+margin-bottom:50px;
 
-.about-box{
-
-background:#1e293b;
-
-padding:35px;
-
-border-radius:20px;
-
-line-height:1.9;
-
-color:#cbd5e1;
+font-weight:700;
 
 }
 
-/* Skills */
+/*======================
+CARDS
+======================*/
 
-.skills{
+.card{
+
+background:var(--card);
+
+padding:30px;
+
+border-radius:18px;
+
+transition:.3s;
+
+border:1px solid rgba(255,255,255,.05);
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--primary);
+
+}
+
+.about{
+
+line-height:2;
+
+font-size:16px;
+
+color:var(--secondary);
+
+}
+  /*======================
+SKILLS
+======================*/
+
+.skills-grid{
 
 display:grid;
 
@@ -225,167 +337,322 @@ gap:20px;
 
 }
 
-.skill{
+.skill-card{
 
-background:#1e293b;
+background:var(--card);
 
 padding:25px;
 
+border-radius:15px;
+
 text-align:center;
 
-border-radius:15px;
+font-weight:600;
 
 transition:.3s;
 
+border:1px solid rgba(255,255,255,.05);
+
 }
 
-.skill:hover{
+.skill-card:hover{
 
-background:#2563eb;
+background:var(--primary);
 
 transform:translateY(-8px);
 
 }
-/* Education */
+
+/*======================
+TIMELINE
+======================*/
 
 .timeline{
 
+position:relative;
+
 max-width:900px;
+
 margin:auto;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:18px;
+
+top:0;
+
+width:3px;
+
+height:100%;
+
+background:var(--primary);
 
 }
 
 .timeline-item{
 
-background:#1e293b;
+position:relative;
+
+margin-left:60px;
+
+margin-bottom:35px;
+
+background:var(--card);
+
 padding:25px;
-border-left:5px solid #3b82f6;
-margin-bottom:25px;
-border-radius:12px;
+
+border-radius:15px;
 
 }
 
-.timeline-item h3{
+.timeline-item::before{
 
-margin-bottom:10px;
+content:"";
+
+position:absolute;
+
+left:-51px;
+
+top:28px;
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+background:var(--primary);
 
 }
 
 .timeline-item span{
 
-color:#60a5fa;
+color:#60A5FA;
+
 font-size:14px;
+
+font-weight:600;
+
+}
+
+.timeline-item h3{
+
+margin:10px 0;
 
 }
 
 .timeline-item p{
 
-margin-top:10px;
-color:#cbd5e1;
+color:var(--secondary);
+
+line-height:1.8;
 
 }
+#menu a.active{
+color:#3B82F6;
+font-weight:600;
+}
+/*======================
+CERTIFICATIONS
+======================*/
 
-/* Projects */
-
-.projects{
+.cert-grid{
 
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
 gap:25px;
 
 }
 
-.project-card{
+.cert-card{
 
-background:#1e293b;
+background:var(--card);
+
 padding:30px;
-border-radius:20px;
+
+border-radius:18px;
+
 transition:.3s;
 
 }
 
-.project-card:hover{
+.cert-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
 }
 
-.project-card h3{
+.cert-card h3{
 
 margin-bottom:15px;
 
 }
 
-.project-card p{
+.cert-card p{
 
-color:#cbd5e1;
-line-height:1.7;
-
-}
-
-.project-links{
-
-margin-top:20px;
-display:flex;
-gap:15px;
+color:var(--secondary);
 
 }
 
-.project-links a{
+/*======================
+PROJECTS
+======================*/
 
-color:#3b82f6;
+.project-box{
+
+background:var(--card);
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
 
 }
 
-/* Contact */
+.project-box h2{
 
-.contact{
+margin-bottom:20px;
+
+}
+
+.project-box p{
+
+color:var(--secondary);
+
+line-height:1.9;
+
+}
+
+/*======================
+CONTACT
+======================*/
+
+.contact-grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
 gap:20px;
 
 }
 
 .contact-card{
 
-background:#1e293b;
-padding:25px;
-border-radius:15px;
+background:var(--card);
+
+padding:30px;
+
+border-radius:18px;
+
 text-align:center;
 
 }
 
 .contact-card h3{
 
-margin-bottom:10px;
+margin-bottom:12px;
 
 }
 
 .contact-card p{
 
-color:#cbd5e1;
+color:var(--secondary);
+
+word-break:break-word;
 
 }
 
-/* Footer */
+.contact-card a{
+
+color:#60A5FA;
+
+}
+
+/*======================
+FOOTER
+======================*/
 
 footer{
 
-padding:40px;
+margin-top:70px;
+
+padding:30px;
+
 text-align:center;
-background:#020617;
-color:#94a3b8;
+
+color:var(--muted);
+
+border-top:1px solid rgba(255,255,255,.08);
 
 }
 
-/* Responsive */
+/*======================
+RESPONSIVE
+======================*/
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+.menu-btn{
+
+display:block;
+
+}
+
+nav{
+
+padding:18px 6%;
+
+}
+
+nav ul{
+
+position:absolute;
+
+top:75px;
+
+left:0;
+
+width:100%;
+
+background:#111827;
+
+display:none;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:25px 0;
+
+gap:20px;
+
+}
+
+nav ul.show{
+
+display:flex;
+
+}
+
+.hero{
+
+min-height:80vh;
+
+}
 
 .hero h1{
 
-font-size:40px;
+font-size:42px;
 
 }
 
@@ -395,28 +662,41 @@ font-size:20px;
 
 }
 
-.buttons{
+.hero p{
+
+font-size:15px;
+
+}
+
+.button-group{
 
 flex-direction:column;
 
-}
-
-nav{
-
-padding:15px 5%;
+align-items:center;
 
 }
 
-nav ul{
+.section-title{
 
-gap:15px;
-font-size:14px;
+font-size:30px;
+
+}
+
+.timeline{
+
+margin-left:10px;
+
+}
+
+.timeline-item{
+
+margin-left:45px;
 
 }
 
 section{
 
-padding:80px 6%;
+padding:60px 7%;
 
 }
 
@@ -427,6 +707,9 @@ padding:80px 6%;
 </head>
 
 <body>
+  <!-- ======================
+     NAVIGATION
+====================== -->
 
 <nav>
 
@@ -434,12 +717,17 @@ padding:80px 6%;
 Kamalesh <span>R</span>
 </div>
 
-<ul>
+<div class="menu-btn" onclick="toggleMenu()">
+&#9776;
+</div>
+
+<ul id="menu">
 
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#education">Education</a></li>
+<li><a href="#certifications">Certificates</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -448,84 +736,147 @@ Kamalesh <span>R</span>
 
 </nav>
 
+<!-- ======================
+     HERO
+====================== -->
+
 <section class="hero" id="home">
 
+<div class="hero-content">
+
 <h1>
+
 Hi, I'm <span>Kamalesh R</span>
+
 </h1>
 
 <h3>
-Second Year B.E. CSE (AI & ML) Student
+
+Second Year B.E. CSE (Artificial Intelligence & Machine Learning)
+
 </h3>
 
 <p>
-Passionate about Artificial Intelligence, Machine Learning, Web Development and Software Engineering. Currently seeking internship opportunities to gain real-world experience and contribute to impactful projects.
+
+Passionate about Artificial Intelligence, Machine Learning and Web Development.
+Currently building a strong foundation in programming while looking for internship opportunities to gain practical industry experience.
+
 </p>
 
-<div class="buttons">
+<div class="button-group">
 
-<a href="#" class="btn">
+<a href="#" class="btn btn-primary">
+
 Download Resume
+
 </a>
 
-<a href="#contact" class="btn btn-outline">
+<a href="#contact" class="btn btn-secondary">
+
 Contact Me
+
 </a>
 
 </div>
 
+</div>
+
 </section>
+
+<!-- ======================
+     ABOUT
+====================== -->
 
 <section id="about">
 
+<div class="container">
+
 <h2 class="section-title">
+
 About Me
+
 </h2>
 
-<div class="about-box">
+<div class="card about">
 
-I am a Second Year Computer Science Engineering (Artificial Intelligence & Machine Learning) student at Jeppiaar Engineering College. I enjoy learning new technologies, building web applications, and strengthening my programming skills. My goal is to secure internships where I can apply my knowledge, solve real-world problems, and continue growing as a software engineer.
+<p>
+
+Hello! I'm <strong>Kamalesh R</strong>, a Computer Science Engineering student specializing in <strong>Artificial Intelligence and Machine Learning</strong> at Jeppiaar Engineering College.
+
+</p>
+
+<br>
+
+<p>
+
+I enjoy solving problems, learning new technologies, and building clean, responsive web applications. My interests include AI, Machine Learning, Python, and Full Stack Web Development.
+
+</p>
+
+<br>
+
+<p>
+
+I'm currently focused on improving my technical skills, creating meaningful projects, and preparing for internship opportunities where I can apply my knowledge in real-world environments.
+
+</p>
+
+</div>
 
 </div>
 
 </section>
+<!-- ======================
+     SKILLS
+====================== -->
+
 <section id="skills">
+
+<div class="container">
 
 <h2 class="section-title">
 Technical Skills
 </h2>
 
-<div class="skills">
+<div class="skills-grid">
 
-<div class="skill">Python</div>
+<div class="skill-card">Python</div>
 
-<div class="skill">C</div>
+<div class="skill-card">C</div>
 
-<div class="skill">C++</div>
+<div class="skill-card">C++</div>
 
-<div class="skill">HTML</div>
+<div class="skill-card">HTML5</div>
 
-<div class="skill">CSS</div>
+<div class="skill-card">CSS3</div>
 
-<div class="skill">JavaScript</div>
+<div class="skill-card">JavaScript</div>
 
-<div class="skill">Git</div>
+<div class="skill-card">Git</div>
 
-<div class="skill">GitHub</div>
+<div class="skill-card">GitHub</div>
 
-<div class="skill">Machine Learning</div>
+<div class="skill-card">Machine Learning</div>
 
-<div class="skill">Problem Solving</div>
+<div class="skill-card">Problem Solving</div>
 
-<div class="skill">MS Office</div>
+<div class="skill-card">Communication</div>
 
-<div class="skill">Communication</div>
+<div class="skill-card">MS Office</div>
+
+</div>
 
 </div>
 
 </section>
 
+<!-- ======================
+     EDUCATION
+====================== -->
+
 <section id="education">
+
+<div class="container">
 
 <h2 class="section-title">
 Education
@@ -535,45 +886,63 @@ Education
 
 <div class="timeline-item">
 
-<span>2025 – 2029</span>
+<span>2025 - 2029</span>
 
 <h3>
-B.E. Computer Science Engineering (Artificial Intelligence & Machine Learning)
+Bachelor of Engineering
 </h3>
 
 <p>
+
+Computer Science Engineering (Artificial Intelligence & Machine Learning)
+
+<br><br>
+
 Jeppiaar Engineering College, Chennai
+
 </p>
 
 </div>
 
 <div class="timeline-item">
 
-<span>2025</span>
+<span>2024 - 2025</span>
 
 <h3>
 Higher Secondary Certificate (HSC)
 </h3>
 
 <p>
-NSVV Boys Higher Secondary School<br>
-Score: 91%
+
+NSVV Boys Higher Secondary School
+
+<br><br>
+
+Percentage : <strong>91%</strong>
+
 </p>
 
 </div>
 
 <div class="timeline-item">
 
-<span>2023</span>
+<span>2022 - 2023</span>
 
 <h3>
 Secondary School Leaving Certificate (SSLC)
 </h3>
 
 <p>
-NSVV Boys Higher Secondary School<br>
-Score: 88%
+
+NSVV Boys Higher Secondary School
+
+<br><br>
+
+Percentage : <strong>88%</strong>
+
 </p>
+
+</div>
 
 </div>
 
@@ -581,123 +950,94 @@ Score: 88%
 
 </section>
 
+<!-- ======================
+     CERTIFICATIONS
+====================== -->
+
 <section id="certifications">
+
+<div class="container">
 
 <h2 class="section-title">
 Certifications
 </h2>
 
-<div class="projects">
+<div class="cert-grid">
 
-<div class="project-card">
+<div class="cert-card">
 
 <h3>
 Fundamentals of AI & ML
 </h3>
 
 <p>
+
 Infosys Springboard
+
 </p>
 
 </div>
 
-<div class="project-card">
+<div class="cert-card">
 
 <h3>
 Fundamentals of Machine Learning & Artificial Intelligence
 </h3>
 
 <p>
+
 AWS Academy
+
 </p>
 
 </div>
 
-<div class="project-card">
+<div class="cert-card">
 
 <h3>
 Introduction to Generative AI
 </h3>
 
 <p>
+
 Google Cloud Skills Boost
+
 </p>
 
 </div>
 
 </div>
 
-</section>
+</div>
+
+</section> 
+  <!-- ======================
+     PROJECTS
+====================== -->
 
 <section id="projects">
+
+<div class="container">
 
 <h2 class="section-title">
 Projects
 </h2>
 
-<div class="projects">
+<div class="project-box">
 
-<div class="project-card">
-
-<h3>
-Personal Portfolio Website
-</h3>
+<h2>🚀 Coming Soon</h2>
 
 <p>
-Designed and developed a responsive personal portfolio using HTML, CSS and JavaScript.
+
+I'm currently working on exciting projects related to Artificial Intelligence,
+Machine Learning and Web Development.
+
+These projects will be published here soon along with GitHub repositories,
+live demos and detailed documentation.
+
+Stay tuned!
+
 </p>
-
-<div class="project-links">
-
-<a href="#">
-GitHub
-</a>
-
-<a href="#">
-Live Demo
-</a>
-
-</div>
-
-</div>
-
-<div class="project-card">
-
-<h3>
-Python Mini Projects
-</h3>
-
-<p>
-Collection of beginner-friendly Python applications demonstrating programming concepts.
-</p>
-
-<div class="project-links">
-
-<a href="#">
-GitHub
-</a>
-
-</div>
-
-</div>
-
-<div class="project-card">
-
-<h3>
-AI/ML Mini Project
-</h3>
-
-<p>
-Machine Learning project placeholder. Replace this section with your future AI project.
-</p>
-
-<div class="project-links">
-
-<a href="#">
-GitHub
-</a>
-
-</div>
 
 </div>
 
@@ -705,7 +1045,13 @@ GitHub
 
 </section>
 
+<!-- ======================
+     EXPERIENCE
+====================== -->
+
 <section id="experience">
+
+<div class="container">
 
 <h2 class="section-title">
 Experience
@@ -718,80 +1064,317 @@ Experience
 <span>Present</span>
 
 <h3>
-Seeking Internship
+Learning Journey
 </h3>
 
 <p>
-Actively looking for internship opportunities in Artificial Intelligence, Machine Learning and Software Development.
+
+Currently strengthening my skills in
+
+<ul style="margin-top:15px;padding-left:20px;line-height:2;color:#CBD5E1;">
+
+<li>Python Programming</li>
+
+<li>Artificial Intelligence</li>
+
+<li>Machine Learning</li>
+
+<li>Data Structures & Algorithms</li>
+
+<li>Frontend Web Development</li>
+
+<li>Git & GitHub</li>
+
+</ul>
+
 </p>
 
 </div>
 
-<!-- Add future internship experience here -->
+<div class="timeline-item">
+
+<span>Next Goal</span>
+
+<h3>
+Internship</h3>
+
+<p>
+
+Seeking internship opportunities where I can contribute,
+learn from experienced professionals and gain practical
+industry experience.
+
+This section will be updated as my professional journey grows.
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
+
+<!-- ======================
+     CURRENT FOCUS
+====================== -->
+
+<section id="focus">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Current Focus
+
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+
+🤖
+
+<br><br>
+
+Artificial Intelligence
+
+</div>
+
+<div class="skill-card">
+
+🧠
+
+<br><br>
+
+Machine Learning
+
+</div>
+
+<div class="skill-card">
+
+💻
+
+<br><br>
+
+Web Development
+
+</div>
+
+<div class="skill-card">
+
+📚
+
+<br><br>
+
+Data Structures
+
+</div>
+
+<div class="skill-card">
+
+⚡
+
+<br><br>
+
+Problem Solving
+
+</div>
+
+<div class="skill-card">
+
+🚀
+
+<br><br>
+
+Internship Preparation
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ======================
+     CONTACT
+====================== -->
 
 <section id="contact">
 
+<div class="container">
+
 <h2 class="section-title">
-Contact
+Get In Touch
 </h2>
 
-<div class="contact">
+<div class="contact-grid">
 
 <div class="contact-card">
 
-<h3>Email</h3>
+<h3>📧 Email</h3>
 
 <p>
+
+<a href="mailto:itzzkamalesh@gmail.com">
+
 itzzkamalesh@gmail.com
+
+</a>
+
 </p>
 
 </div>
 
 <div class="contact-card">
 
-<h3>Phone</h3>
+<h3>📱 Phone</h3>
 
 <p>
+
+<a href="tel:+917010486764">
+
 +91 70104 86764
+
+</a>
+
 </p>
 
 </div>
 
 <div class="contact-card">
 
-<h3>GitHub</h3>
+<h3>💻 GitHub</h3>
 
 <p>
+
+<a href="https://github.com/itzzkamalesh" target="_blank">
+
 github.com/itzzkamalesh
+
+</a>
+
 </p>
 
 </div>
 
 <div class="contact-card">
 
-<h3>LinkedIn</h3>
+<h3>💼 LinkedIn</h3>
 
 <p>
-linkedin.com/in/kamaleshram
+
+<a href="#" target="_blank">
+
+Add Your LinkedIn Profile
+
+</a>
+
 </p>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
+
+<!-- ======================
+     FOOTER
+====================== -->
 
 <footer>
 
 <p>
-© 2026 Kamalesh R. All Rights Reserved.
+
+© 2026 Kamalesh R • Built with HTML, CSS & JavaScript
+
 </p>
 
 </footer>
+
+<!-- ======================
+     JAVASCRIPT
+====================== -->
+
+<script>
+
+// Mobile Menu
+
+function toggleMenu(){
+
+document.getElementById("menu").classList.toggle("show");
+
+}
+
+// Close menu after clicking a link
+
+document.querySelectorAll("#menu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+document.getElementById("menu").classList.remove("show");
+
+});
+
+});
+
+// Navbar shadow while scrolling
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>20){
+
+nav.style.boxShadow="0 8px 20px rgba(0,0,0,.35)";
+
+}else{
+
+nav.style.boxShadow="none";
+
+}
+
+});
+
+// Highlight active navigation link
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("#menu a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-120;
+
+if(pageYOffset>=sectionTop){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")=="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+</script>
 
 </body>
 
