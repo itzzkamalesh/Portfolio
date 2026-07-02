@@ -1,399 +1,1417 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Different Operating Systems</title>
-    <style>
-        *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kamalesh R | Portfolio</title>
+
+<meta name="description" content="Portfolio of Kamalesh R">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+:root{
+
+--bg:#0F172A;
+--card:#1E293B;
+--primary:#3B82F6;
+--text:#F8FAFC;
+--secondary:#CBD5E1;
+--muted:#94A3B8;
+
 }
 
 body{
-    background:#f4f6f9;
+
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+
 }
 
-header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:20px;
+img{
+max-width:100%;
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+section{
+
+padding:70px 9%;
+
 }
 
 .container{
-    width:90%;
-    max-width:900px;
-    margin:30px auto;
+
+max-width:1200px;
+margin:auto;
+
 }
 
-.page{
-    display:none;
+/*======================
+NAVBAR
+======================*/
+
+nav{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:18px 9%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(15,23,42,.95);
+
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
 }
 
-.page.active{
-    display:block;
+.logo{
+
+font-size:30px;
+
+font-weight:700;
+
+color:white;
+
 }
 
-h2{
-    text-align:center;
-    margin-bottom:25px;
-    color:#333;
+.logo span{
+
+color:var(--primary);
+
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-    margin-bottom:30px;
+nav ul{
+
+display:flex;
+
+gap:35px;
+
 }
+
+nav ul li a{
+
+color:white;
+
+font-size:15px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:var(--primary);
+
+}
+
+/* Mobile Menu */
+
+.menu-btn{
+
+display:none;
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+/*======================
+HERO
+======================*/
+
+.hero{
+
+min-height:88vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding-top:100px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+margin-bottom:15px;
+
+line-height:1.2;
+
+}
+
+.hero span{
+
+color:var(--primary);
+
+}
+
+.hero h3{
+
+font-size:24px;
+
+font-weight:500;
+
+color:var(--secondary);
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:var(--muted);
+
+margin-bottom:40px;
+
+}
+
+.button-group{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 34px;
+
+border-radius:10px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-primary{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+.btn-secondary{
+
+border:2px solid var(--primary);
+
+color:white;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+/*======================
+SECTION TITLES
+======================*/
+
+.section-title{
+
+font-size:38px;
+
+text-align:center;
+
+margin-bottom:50px;
+
+font-weight:700;
+
+}
+
+/*======================
+CARDS
+======================*/
 
 .card{
-    background:white;
-    padding:25px;
-    text-align:center;
-    border-radius:10px;
-    cursor:pointer;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    transition:0.3s;
-    font-size:18px;
-    font-weight:bold;
+
+background:var(--card);
+
+padding:30px;
+
+border-radius:18px;
+
+transition:.3s;
+
+border:1px solid rgba(255,255,255,.05);
+
 }
 
 .card:hover{
-    background:#0d6efd;
-    color:white;
-    transform:translateY(-5px);
-}
 
-.page p{
-    margin:12px 0;
-    font-size:18px;
-}
+transform:translateY(-8px);
 
-.page ul{
-    margin:15px 0 20px 25px;
-    font-size:17px;
-}
-
-button{
-    background:#0d6efd;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:16px;
-}
-
-button:hover{
-    background:#0b5ed7;
-}
-
-@media(max-width:600px){
-
-    .card{
-        font-size:16px;
-        padding:20px;
-    }
-
-    h2{
-        font-size:24px;
-    }
+border-color:var(--primary);
 
 }
-    </style>
+
+.about{
+
+line-height:2;
+
+font-size:16px;
+
+color:var(--secondary);
+
+}
+  /*======================
+SKILLS
+======================*/
+
+.skills-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+}
+
+.skill-card{
+
+background:#1E293B;
+
+padding:22px;
+
+border-radius:16px;
+
+text-align:center;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.skill-card:hover{
+
+background:#3B82F6;
+
+}
+
+@media(max-width:768px){
+
+.skills-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+/*======================
+TIMELINE
+======================*/
+
+.timeline{
+
+position:relative;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:18px;
+
+top:0;
+
+width:3px;
+
+height:100%;
+
+background:var(--primary);
+
+}
+
+.timeline-item{
+
+position:relative;
+
+margin-left:60px;
+
+margin-bottom:35px;
+
+background:var(--card);
+
+padding:25px;
+
+border-radius:15px;
+
+}
+
+.timeline-item::before{
+
+content:"";
+
+position:absolute;
+
+left:-51px;
+
+top:28px;
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+background:var(--primary);
+
+}
+
+.timeline-item span{
+
+color:#60A5FA;
+
+font-size:14px;
+
+font-weight:600;
+
+}
+
+.timeline-item h3{
+
+margin:10px 0;
+
+}
+
+.timeline-item p{
+
+color:var(--secondary);
+
+line-height:1.8;
+
+}
+#menu a.active{
+color:#3B82F6;
+font-weight:600;
+}
+/*======================
+CERTIFICATIONS
+======================*/
+.cert-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+}
+
+.cert-card{
+
+background:#111827;
+
+padding:35px;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.cert-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.cert-company{
+
+letter-spacing:4px;
+
+font-size:13px;
+
+color:#94A3B8;
+
+}
+
+.cert-card h3{
+
+margin:25px 0 15px;
+
+font-size:28px;
+
+}
+
+.cert-card p{
+
+font-size:18px;
+
+color:#CBD5E1;
+
+margin-bottom:30px;
+
+}
+
+.cert-card a{
+
+color:#6366F1;
+
+font-size:18px;
+
+font-weight:500;
+
+}
+
+/*======================
+PROJECTS
+======================*/
+
+.project-box{
+
+background:var(--card);
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+.project-box h2{
+
+margin-bottom:20px;
+
+}
+
+.project-box p{
+
+color:var(--secondary);
+
+line-height:1.9;
+
+}
+
+/*======================
+CONTACT
+======================*/
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:20px;
+
+}
+
+.contact-card{
+
+background:var(--card);
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+}
+
+.contact-card h3{
+
+margin-bottom:12px;
+
+}
+
+.contact-card p{
+
+color:var(--secondary);
+
+word-break:break-word;
+
+}
+
+.contact-card a{
+
+color:#60A5FA;
+
+}
+
+/*======================
+FOOTER
+======================*/
+
+footer{
+
+margin-top:70px;
+
+padding:30px;
+
+text-align:center;
+
+color:var(--muted);
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/*======================
+RESPONSIVE
+======================*/
+
+@media(max-width:900px){
+
+.menu-btn{
+
+display:block;
+
+}
+
+nav{
+
+padding:18px 6%;
+
+}
+
+nav ul{
+
+position:absolute;
+
+top:75px;
+
+left:0;
+
+width:100%;
+
+background:#111827;
+
+display:none;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:25px 0;
+
+gap:20px;
+
+}
+
+nav ul.show{
+
+display:flex;
+
+}
+
+.hero{
+
+min-height:80vh;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h3{
+
+font-size:20px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.button-group{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+}
+
+.timeline{
+
+margin-left:10px;
+
+}
+
+.timeline-item{
+
+margin-left:45px;
+
+}
+
+section{
+
+padding:60px 7%;
+
+}
+
+}
+
+</style>
+
 </head>
-<body>
 
-<header>
-    <h1>Different Operating Systems</h1>
-</header>
+<body>
+  <!-- ======================
+     NAVIGATION
+====================== -->
+
+<nav>
+
+<div class="logo">
+Kamalesh <span>R</span>
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">
+&#9776;
+</div>
+
+<ul id="menu">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#certifications">Certificates</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- ======================
+     HERO
+====================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+
+Hi, I'm <span>Kamalesh R</span>
+
+</h1>
+
+<h3>
+
+Second Year B.E. CSE (Artificial Intelligence & Machine Learning)
+
+</h3>
+
+<p>
+
+Passionate about Artificial Intelligence, Machine Learning and Web Development.
+Currently building a strong foundation in programming while looking for internship opportunities to gain practical industry experience.
+
+</p>
+
+<div class="button-group">
+
+<a href="#" class="btn btn-primary">
+
+Download Resume
+
+</a>
+
+<a href="#contact" class="btn btn-secondary">
+
+Contact Me
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================
+     ABOUT
+====================== -->
+
+<section id="about">
 
 <div class="container">
 
-    <!-- Home -->
-    <div id="home" class="page active">
-        <h2>Select an Operating System</h2>
+<h2 class="section-title">
 
-        <div class="cards">
+About Me
 
-            <div class="card" onclick="showPage('windows')">
-                <h3>🪟 Windows</h3>
-            </div>
+</h2>
 
-            <div class="card" onclick="showPage('android')">
-                <h3>🤖 Android</h3>
-            </div>
+<div class="card about">
 
-            <div class="card" onclick="showPage('linux')">
-                <h3>🐧 Linux</h3>
-            </div>
+<p>
 
-            <div class="card" onclick="showPage('macos')">
-                <h3>🍎 macOS</h3>
-            </div>
+Hello! I'm <strong>Kamalesh R</strong>, a Computer Science Engineering student specializing in <strong>Artificial Intelligence and Machine Learning</strong> at Jeppiaar Engineering College.
 
-            <div class="card" onclick="showPage('ios')">
-                <h3>📱 iOS</h3>
-            </div>
+</p>
 
-        </div>
-    </div>
+<br>
 
-    <!-- Windows -->
-    <div id="windows" class="page">
+<p>
 
-        <h2>Windows Versions</h2>
+I enjoy solving problems, learning new technologies, and building clean, responsive web applications. My interests include AI, Machine Learning, Python, and Full Stack Web Development.
 
-        <div class="cards">
+</p>
 
-            <div class="card" onclick="showPage('xp')">Windows XP</div>
+<br>
 
-            <div class="card" onclick="showPage('win7')">Windows 7</div>
+<p>
 
-            <div class="card" onclick="showPage('win8')">Windows 8</div>
+I'm currently focused on improving my technical skills, creating meaningful projects, and preparing for internship opportunities where I can apply my knowledge in real-world environments.
 
-            <div class="card" onclick="showPage('win10')">Windows 10</div>
-
-            <div class="card" onclick="showPage('win11')">Windows 11</div>
-
-        </div>
-
-        <button onclick="showPage('home')">⬅ Back</button>
-
-    </div>
-
-    <!-- Windows XP -->
-    <div id="xp" class="page">
-
-        <h2>Windows XP</h2>
-
-        <p><b>Released:</b> 2001</p>
-        <p><b>Developer:</b> Microsoft</p>
-        <p><b>Purpose:</b> Personal computers and home users.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Easy-to-use graphical interface.</li>
-            <li>Stable and reliable performance.</li>
-            <li>Fast startup for its time.</li>
-            <li>Supported many software applications.</li>
-            <li>Popular in homes, schools and offices.</li>
-        </ul>
-
-        <button onclick="showPage('windows')">⬅ Back</button>
-
-    </div>
-
-    <!-- Windows 7 -->
-    <div id="win7" class="page">
-
-        <h2>Windows 7</h2>
-
-        <p><b>Released:</b> 2009</p>
-        <p><b>Developer:</b> Microsoft</p>
-        <p><b>Purpose:</b> Home, office and educational use.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Improved taskbar and Start Menu.</li>
-            <li>Better speed and overall performance.</li>
-            <li>User-friendly interface.</li>
-            <li>Enhanced security features.</li>
-            <li>One of Microsoft's most popular versions.</li>
-        </ul>
-
-        <button onclick="showPage('windows')">⬅ Back</button>
-
-    </div>
-        <!-- Windows 8 -->
-    <div id="win8" class="page">
-
-        <h2>Windows 8</h2>
-
-        <p><b>Released:</b> 2012</p>
-        <p><b>Developer:</b> Microsoft</p>
-        <p><b>Purpose:</b> PCs and touchscreen devices.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Introduced the Live Tiles interface.</li>
-            <li>Designed for touch-enabled devices.</li>
-            <li>Faster startup than previous versions.</li>
-            <li>Included the Windows Store.</li>
-            <li>Improved file management.</li>
-        </ul>
-
-        <button onclick="showPage('windows')">⬅ Back</button>
-
-    </div>
-
-    <!-- Windows 10 -->
-    <div id="win10" class="page">
-
-        <h2>Windows 10</h2>
-
-        <p><b>Released:</b> 2015</p>
-        <p><b>Developer:</b> Microsoft</p>
-        <p><b>Purpose:</b> Modern PCs and laptops.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Introduced Microsoft Edge browser.</li>
-            <li>Supports Virtual Desktops.</li>
-            <li>Built-in Windows Defender.</li>
-            <li>Regular feature and security updates.</li>
-            <li>Excellent for gaming and productivity.</li>
-        </ul>
-
-        <button onclick="showPage('windows')">⬅ Back</button>
-
-    </div>
-
-    <!-- Windows 11 -->
-    <div id="win11" class="page">
-
-        <h2>Windows 11</h2>
-
-        <p><b>Released:</b> 2021</p>
-        <p><b>Developer:</b> Microsoft</p>
-        <p><b>Purpose:</b> Latest operating system for modern computers.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Modern and clean user interface.</li>
-            <li>Centered Start Menu.</li>
-            <li>Snap Layouts for multitasking.</li>
-            <li>Improved gaming performance.</li>
-            <li>Better security features.</li>
-        </ul>
-
-        <button onclick="showPage('windows')">⬅ Back</button>
-
-    </div>
-
-    <!-- Android -->
-    <div id="android" class="page">
-
-        <h2>Android</h2>
-
-        <p><b>Released:</b> 2008</p>
-        <p><b>Developer:</b> Google</p>
-        <p><b>Purpose:</b> Smartphones, tablets and smart devices.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Based on the Linux kernel.</li>
-            <li>Open-source mobile operating system.</li>
-            <li>Supports millions of apps.</li>
-            <li>Google Play Store for applications.</li>
-            <li>Highly customizable.</li>
-        </ul>
-
-        <button onclick="showPage('home')">⬅ Back</button>
-
-    </div>
-
-    <!-- Linux -->
-    <div id="linux" class="page">
-
-        <h2>Linux</h2>
-
-        <p><b>Released:</b> 1991</p>
-        <p><b>Developer:</b> Linus Torvalds</p>
-        <p><b>Purpose:</b> Servers, desktops and programming.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Open-source operating system.</li>
-            <li>Highly secure and stable.</li>
-            <li>Used in servers and supercomputers.</li>
-            <li>Many distributions like Ubuntu and Fedora.</li>
-            <li>Preferred by developers.</li>
-        </ul>
-
-        <button onclick="showPage('home')">⬅ Back</button>
-
-    </div>
-
-    <!-- macOS -->
-    <div id="macos" class="page">
-
-        <h2>macOS</h2>
-
-        <p><b>Released:</b> 2001</p>
-        <p><b>Developer:</b> Apple</p>
-        <p><b>Purpose:</b> Apple Mac computers.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Designed exclusively for Mac devices.</li>
-            <li>Simple and elegant interface.</li>
-            <li>Strong security and privacy.</li>
-            <li>Optimized for Apple hardware.</li>
-            <li>Popular among creative professionals.</li>
-        </ul>
-
-        <button onclick="showPage('home')">⬅ Back</button>
-
-    </div>
-
-    <!-- iOS -->
-    <div id="ios" class="page">
-
-        <h2>iOS</h2>
-
-        <p><b>Released:</b> 2007</p>
-        <p><b>Developer:</b> Apple</p>
-        <p><b>Purpose:</b> iPhones and iPads.</p>
-
-        <h3>Key Information</h3>
-
-        <ul>
-            <li>Fast and smooth performance.</li>
-            <li>High security and privacy.</li>
-            <li>Access to the Apple App Store.</li>
-            <li>Regular software updates.</li>
-            <li>Easy-to-use interface.</li>
-        </ul>
-
-        <button onclick="showPage('home')">⬅ Back</button>
-
-    </div>
+</p>
 
 </div>
-    <script>
 
-function showPage(pageId) {
+</div>
 
-    // Hide all pages
-    const pages = document.querySelectorAll(".page");
+</section>
+<!-- ======================
+     SKILLS
+====================== -->
 
-    pages.forEach(function(page) {
-        page.classList.remove("active");
-    });
+<section id="skills">
 
-    // Show selected page
-    document.getElementById(pageId).classList.add("active");
+<div class="container">
 
-    // Scroll to top
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+<h2 class="section-title">
+Technical Skills
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">Python</div>
+
+<div class="skill-card">C</div>
+
+<div class="skill-card">C++</div>
+
+<div class="skill-card">HTML5</div>
+
+<div class="skill-card">CSS3</div>
+
+<div class="skill-card">JavaScript</div>
+
+<div class="skill-card">Git</div>
+
+<div class="skill-card">GitHub</div>
+
+<div class="skill-card">Machine Learning</div>
+
+<div class="skill-card">Problem Solving</div>
+
+<div class="skill-card">Communication</div>
+
+<div class="skill-card">MS Office</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================
+     EDUCATION
+====================== -->
+
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title">
+Education
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<span>2025 - 2029</span>
+
+<h3>
+Bachelor of Engineering
+</h3>
+
+<p>
+
+Computer Science Engineering (Artificial Intelligence & Machine Learning)
+
+<br><br>
+
+Jeppiaar Engineering College, Chennai
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<span>2024 - 2025</span>
+
+<h3>
+Higher Secondary Certificate (HSC)
+</h3>
+
+<p>
+
+NSVV Boys Higher Secondary School
+
+<br><br>
+
+Percentage : <strong>91%</strong>
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<span>2022 - 2023</span>
+
+<h3>
+Secondary School Leaving Certificate (SSLC)
+</h3>
+
+<p>
+
+NSVV Boys Higher Secondary School
+
+<br><br>
+
+Percentage : <strong>88%</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================
+     CERTIFICATIONS
+====================== -->
+
+<section id="certifications">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Certifications
+
+</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+
+<span class="cert-company">
+
+GOOGLE
+
+</span>
+
+<h3>
+
+Introduction to Generative AI
+
+</h3>
+
+<p>
+
+Issued 2026
+
+</p>
+
+<a href="#">
+
+Verify Credential →
+
+</a>
+
+</div>
+
+<div class="cert-card">
+
+<span class="cert-company">
+
+INFOSYS
+
+</span>
+
+<h3>
+
+Fundamentals of AI & ML
+
+</h3>
+
+<p>
+
+Issued 2026
+
+</p>
+
+<a href="#">
+
+Verify Credential →
+
+</a>
+
+</div>
+
+<div class="cert-card">
+
+<span class="cert-company">
+
+AWS
+
+</span>
+
+<h3>
+
+Fundamentals of Machine Learning & AI
+
+</h3>
+
+<p>
+
+Issued 2026
+
+</p>
+
+<a href="#">
+
+Verify Credential →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>  
+  <!-- ======================
+     PROJECTS
+====================== -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+Projects
+</h2>
+
+<div class="project-box">
+
+<h2>🚀 Coming Soon</h2>
+
+<p>
+
+I'm currently working on exciting projects related to Artificial Intelligence,
+Machine Learning and Web Development.
+
+These projects will be published here soon along with GitHub repositories,
+live demos and detailed documentation.
+
+Stay tuned!
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================
+     EXPERIENCE
+====================== -->
+
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">
+Experience
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<span>Present</span>
+
+<h3>
+Learning Journey
+</h3>
+
+<p>
+
+Currently strengthening my skills in
+
+<ul style="margin-top:15px;padding-left:20px;line-height:2;color:#CBD5E1;">
+
+<li>Python Programming</li>
+
+<li>Artificial Intelligence</li>
+
+<li>Machine Learning</li>
+
+<li>Data Structures & Algorithms</li>
+
+<li>Frontend Web Development</li>
+
+<li>Git & GitHub</li>
+
+</ul>
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<span>Next Goal</span>
+
+<h3>
+Internship</h3>
+
+<p>
+
+Seeking internship opportunities where I can contribute,
+learn from experienced professionals and gain practical
+industry experience.
+
+This section will be updated as my professional journey grows.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================
+     CURRENT FOCUS
+====================== -->
+
+<div class="skills-grid">
+
+<div class="skill-card">
+🤖
+<br><br>
+Artificial Intelligence
+</div>
+
+<div class="skill-card">
+🧠
+<br><br>
+Machine Learning
+</div>
+
+<div class="skill-card">
+💻
+<br><br>
+Web Development
+</div>
+
+<div class="skill-card">
+📚
+<br><br>
+Data Structures
+</div>
+
+<div class="skill-card">
+⚡
+<br><br>
+Problem Solving
+</div>
+
+<div class="skill-card">
+🚀
+<br><br>
+Internship Prep
+</div>
+
+</div>
+  <!-- ======================
+     CONTACT
+====================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Get In Touch
+</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>📧 Email</h3>
+
+<p>
+
+<a href="mailto:itzzkamalesh@gmail.com">
+
+itzzkamalesh@gmail.com
+
+</a>
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>📱 Phone</h3>
+
+<p>
+
+<a href="tel:+917010486764">
+
++91 70104 86764
+
+</a>
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>💻 GitHub</h3>
+
+<p>
+
+<a href="https://github.com/itzzkamalesh" target="_blank">
+
+github.com/itzzkamalesh
+
+</a>
+
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>💼 LinkedIn</h3>
+
+<p>
+
+<a href="#" target="_blank">
+
+Add Your LinkedIn Profile
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ======================
+     FOOTER
+====================== -->
+
+<footer>
+
+<p>
+
+© 2026 Kamalesh R • Built with HTML, CSS & JavaScript
+
+</p>
+
+</footer>
+
+<!-- ======================
+     JAVASCRIPT
+====================== -->
+
+<script>
+
+// Mobile Menu
+
+function toggleMenu(){
+
+document.getElementById("menu").classList.toggle("show");
 
 }
+
+// Close menu after clicking a link
+
+document.querySelectorAll("#menu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+document.getElementById("menu").classList.remove("show");
+
+});
+
+});
+
+// Navbar shadow while scrolling
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>20){
+
+nav.style.boxShadow="0 8px 20px rgba(0,0,0,.35)";
+
+}else{
+
+nav.style.boxShadow="none";
+
+}
+
+});
+
+// Highlight active navigation link
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("#menu a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-120;
+
+if(pageYOffset>=sectionTop){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")=="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
 </script>
+
 </body>
+
 </html>
