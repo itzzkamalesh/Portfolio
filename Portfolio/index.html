@@ -331,19 +331,19 @@ SKILLS
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(2,1fr);
 
-gap:20px;
+gap:18px;
 
 }
 
 .skill-card{
 
-background:var(--card);
+background:#1E293B;
 
-padding:25px;
+padding:22px;
 
-border-radius:15px;
+border-radius:16px;
 
 text-align:center;
 
@@ -351,18 +351,23 @@ font-weight:600;
 
 transition:.3s;
 
-border:1px solid rgba(255,255,255,.05);
-
 }
 
 .skill-card:hover{
 
-background:var(--primary);
-
-transform:translateY(-8px);
+background:#3B82F6;
 
 }
 
+@media(max-width:768px){
+
+.skills-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
 /*======================
 TIMELINE
 ======================*/
@@ -461,12 +466,11 @@ font-weight:600;
 /*======================
 CERTIFICATIONS
 ======================*/
-
 .cert-grid{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
 gap:25px;
 
@@ -474,11 +478,11 @@ gap:25px;
 
 .cert-card{
 
-background:var(--card);
+background:#111827;
 
-padding:30px;
+padding:35px;
 
-border-radius:18px;
+border-radius:30px;
 
 transition:.3s;
 
@@ -490,15 +494,41 @@ transform:translateY(-8px);
 
 }
 
+.cert-company{
+
+letter-spacing:4px;
+
+font-size:13px;
+
+color:#94A3B8;
+
+}
+
 .cert-card h3{
 
-margin-bottom:15px;
+margin:25px 0 15px;
+
+font-size:28px;
 
 }
 
 .cert-card p{
 
-color:var(--secondary);
+font-size:18px;
+
+color:#CBD5E1;
+
+margin-bottom:30px;
+
+}
+
+.cert-card a{
+
+color:#6366F1;
+
+font-size:18px;
+
+font-weight:500;
 
 }
 
@@ -959,58 +989,102 @@ Percentage : <strong>88%</strong>
 <div class="container">
 
 <h2 class="section-title">
+
 Certifications
+
 </h2>
 
 <div class="cert-grid">
 
 <div class="cert-card">
 
-<h3>
-Fundamentals of AI & ML
-</h3>
+<span class="cert-company">
 
-<p>
+GOOGLE
 
-Infosys Springboard
-
-</p>
-
-</div>
-
-<div class="cert-card">
+</span>
 
 <h3>
-Fundamentals of Machine Learning & Artificial Intelligence
-</h3>
 
-<p>
-
-AWS Academy
-
-</p>
-
-</div>
-
-<div class="cert-card">
-
-<h3>
 Introduction to Generative AI
+
 </h3>
 
 <p>
 
-Google Cloud Skills Boost
+Issued 2026
 
 </p>
 
+<a href="#">
+
+Verify Credential →
+
+</a>
+
 </div>
+
+<div class="cert-card">
+
+<span class="cert-company">
+
+INFOSYS
+
+</span>
+
+<h3>
+
+Fundamentals of AI & ML
+
+</h3>
+
+<p>
+
+Issued 2026
+
+</p>
+
+<a href="#">
+
+Verify Credential →
+
+</a>
+
+</div>
+
+<div class="cert-card">
+
+<span class="cert-company">
+
+AWS
+
+</span>
+
+<h3>
+
+Fundamentals of Machine Learning & AI
+
+</h3>
+
+<p>
+
+Issued 2026
+
+</p>
+
+<a href="#">
+
+Verify Credential →
+
+</a>
 
 </div>
 
 </div>
 
-</section> 
+</div>
+
+</section>  
   <!-- ======================
      PROJECTS
 ====================== -->
@@ -1120,84 +1194,46 @@ This section will be updated as my professional journey grows.
      CURRENT FOCUS
 ====================== -->
 
-<section id="focus">
-
-<div class="container">
-
-<h2 class="section-title">
-
-Current Focus
-
-</h2>
-
 <div class="skills-grid">
 
 <div class="skill-card">
-
 🤖
-
 <br><br>
-
 Artificial Intelligence
-
 </div>
 
 <div class="skill-card">
-
 🧠
-
 <br><br>
-
 Machine Learning
-
 </div>
 
 <div class="skill-card">
-
 💻
-
 <br><br>
-
 Web Development
-
 </div>
 
 <div class="skill-card">
-
 📚
-
 <br><br>
-
 Data Structures
-
 </div>
 
 <div class="skill-card">
-
 ⚡
-
 <br><br>
-
 Problem Solving
-
 </div>
 
 <div class="skill-card">
-
 🚀
-
 <br><br>
-
-Internship Preparation
-
+Internship Prep
 </div>
 
 </div>
-
-</div>
-
-</section>
-<!-- ======================
+  <!-- ======================
      CONTACT
 ====================== -->
 
