@@ -334,9 +334,22 @@ transition:.3s;
 
 }
 
+.skill-card{
+
+background:#1E293B;
+padding:22px;
+border-radius:16px;
+text-align:center;
+font-weight:600;
+color:#F8FAFC;
+transition:.3s;
+
+}
+
 .skill-card:hover{
 
 background:#3B82F6;
+color:#ffffff;
 
 }
 
