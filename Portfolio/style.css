@@ -355,6 +355,13 @@ nav.scrolled {
   padding: 40px;
 }
 
+/* Add this code block directly below .skills-category inside style.css */
+.skills-category:hover {
+  transform: translateY(-8px);
+  border-color: var(--blue-neon);
+  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.15);
+}
+
 .skills-category h3 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -735,10 +742,13 @@ nav.scrolled {
   margin-bottom: 2px;
 }
 
+/* Locate and REPLACE .contact-val inside style.css with this: */
 .contact-val {
   font-weight: 600;
   color: var(--text-main);
   font-size: 0.95rem;
+  word-break: break-all;      /* Forces extremely long links to break gracefully */
+  overflow-wrap: break-word;  /* Ensures standard responsive text wrapping */
 }
 
 /* FOOTER */
