@@ -1,4 +1,4 @@
-#   Kamalesh R 
+<p align="center">#   Kamalesh R </p>p>
 # AI & ML Engineer Portfolio
 
 <p align="center">
