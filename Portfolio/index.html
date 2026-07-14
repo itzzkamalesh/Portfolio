@@ -3,259 +3,321 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kamalesh R | Portfolio</title>
-  <meta name="description" content="Portfolio of Kamalesh R">
+  <title>Kamalesh R | AI & ML Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Kamalesh R - B.E. Computer Science & Engineering (AI & ML) Student">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Section -->
-  <nav>
-    <div class="logo">
-      Kamalesh <span>R</span>
-    </div>
-    <div class="menu-btn" onclick="toggleMenu()">
-      &#9776;
-    </div>
-    <ul id="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certificates</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+
+  <!-- Background mesh accents -->
+  <div class="grid-lines"></div>
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <nav id="navbar">
+      <a href="#home" class="logo">KAMALESH<span>R</span></a>
+      <div class="menu-toggle" onclick="toggleMobileMenu()">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certificates</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <h1>Hi, I'm <span>Kamalesh R</span></h1>
-      <h3>Second Year B.E. CSE (Artificial Intelligence & Machine Learning)</h3>
-      <p>Passionate about Artificial Intelligence, Machine Learning and AI Agents. Currently building a strong foundation in programming while looking for internship opportunities to gain practical industry experience.</p>
-      <div class="button-group">
-        <a href="/Certificates/Resume.pdf" class="btn btn-primary">Download Resume</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      <div class="hero-greeting">Welcome to my portfolio</div>
+      <h1>Kamalesh <span>R</span></h1>
+      <div class="hero-subtitle">B.E. Computer Science & Engineering (AI & ML) Student</div>
+      <p class="hero-description">
+        Second-year student with hands-on project experience in machine learning, natural language processing, and predictive modeling using Python. Seeking an AI/ML internship to contribute data-driven solutions.
+      </p>
+      <div class="hero-buttons">
+        <a href="/Certificates/Resume.pdf" class="btn btn-glow" download>Download Resume</a>
+        <a href="#contact" class="btn btn-outline">Let's Connect</a>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="card about">
-        <p>Hello! I'm <strong>Kamalesh R</strong>, a Computer Science Engineering student specializing in <strong>Artificial Intelligence and Machine Learning</strong> at Jeppiaar Engineering College.</p>
-        <br>
-        <p>I enjoy solving problems and learning new technologies. My interests include AI, Machine Learning, AI Agents and Python.</p>
-        <br>
-        <p>I'm currently focused on improving my technical skills, creating meaningful projects, and preparing for internship opportunities where I can apply my knowledge in real-world environments.</p>
+  <section id="about" class="container scroll-reveal">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I am a dedicated <strong>B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)</strong> student at Jeppiaar Engineering College.</p>
+        <p>I focus on designing efficient, data-driven back-end models. My experience extends to building functional text classifiers, predictive churn models, and resampling pipelines to address complex, imbalanced datasets.</p>
+        <p>I'm eager to join an innovative team as an AI/ML intern to contribute to real-world deployment pipelines while sharpening my quantitative engineering skills.</p>
+      </div>
+      <div class="about-metrics">
+        <div class="glass-card metric-card">
+          <h3>2nd</h3>
+          <p>Year Engineering Student</p>
+        </div>
+        <div class="glass-card metric-card">
+          <h3>3+</h3>
+          <p>Academic ML Projects</p>
+        </div>
+        <div class="glass-card metric-card">
+          <h3>91%</h3>
+          <p>HSC Score Achievement</p>
+        </div>
+        <div class="glass-card metric-card">
+          <h3>3+</h3>
+          <p>Industry Certifications</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <h3 style="margin-bottom: 20px;">Technical Skills</h3>
-      <div class="skills-grid">
-        <div class="skill-card">Python</div>
-        <div class="skill-card">C</div>
-        <div class="skill-card">C++</div>
-        <div class="skill-card">MS Office</div>
+  <section id="skills" class="container scroll-reveal">
+    <h2 class="section-title">Technical <span>Matrix</span></h2>
+    <div class="skills-wrapper">
+      <!-- Languages -->
+      <div class="glass-card skills-category">
+        <h3>Programming Languages</h3>
+        <div class="skills-items">
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">C</span>
+          <span class="skill-badge">C++ (basic)</span>
+        </div>
       </div>
-
-      <h3 style="margin-bottom: 20px; margin-top: 30px;">Soft Skills</h3>
-      <div class="skills-grid">
-        <div class="skill-card">Communication</div>
-        <div class="skill-card">Problem Solving</div>
-        <div class="skill-card">Teamwork</div>
-        <div class="skill-card">Quick Learner</div>
+      <!-- ML & Core AI -->
+      <div class="glass-card skills-category">
+        <h3>Machine Learning & AI</h3>
+        <div class="skills-items">
+          <span class="skill-badge">Machine Learning Fundamentals</span>
+          <span class="skill-badge">Generative AI</span>
+          <span class="skill-badge">AI Agents</span>
+        </div>
+      </div>
+      <!-- Tools & Platforms -->
+      <div class="glass-card skills-category">
+        <h3>Tools & Platforms</h3>
+        <div class="skills-items">
+          <span class="skill-badge">MS Office</span>
+          <span class="skill-badge">Git/GitHub (basic)</span>
+        </div>
+      </div>
+      <!-- Soft Skills -->
+      <div class="glass-card skills-category">
+        <h3>Soft Skills</h3>
+        <div class="skills-items">
+          <span class="skill-badge">Communication</span>
+          <span class="skill-badge">Problem Solving</span>
+          <span class="skill-badge">Teamwork</span>
+          <span class="skill-badge">Time Management</span>
+          <span class="skill-badge">Quick Learner</span>
+        </div>
+      </div>
+      <!-- Languages -->
+      <div class="glass-card skills-category">
+        <h3>Languages</h3>
+        <div class="skills-items">
+          <span class="skill-badge">English (Professional)</span>
+          <span class="skill-badge">Tamil (Native)</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Education Section -->
-  <section id="education">
-    <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span>2025 - 2029 (Present)</span>
-          <h3>Bachelor of Engineering</h3>
-          <p>Computer Science Engineering (Artificial Intelligence & Machine Learning)<br><br>Jeppiaar Engineering College, Chennai</p>
-        </div>
-        <div class="timeline-item">
-          <span>2025</span>
-          <h3>Higher Secondary Certificate (HSC)</h3>
-          <p>NSVV Boys Higher Secondary School<br><br>Percentage: <strong>91%</strong></p>
-        </div>
-        <div class="timeline-item">
-          <span>2023</span>
-          <h3>Secondary School Leaving Certificate (SSLC)</h3>
-          <p>NSVV Boys Higher Secondary School<br><br>Percentage: <strong>88%</strong></p>
-        </div>
+  <section id="education" class="container scroll-reveal">
+    <h2 class="section-title">Academic <span>Journey</span></h2>
+    <div class="edu-grid">
+      <!-- Card 1 -->
+      <div class="glass-card edu-card" onmousemove="tiltCard(event, this)" onmouseleave="resetTilt(this)">
+        <span class="edu-year">2025 - 2029 (Present)</span>
+        <h3>B.E. Computer Science & Engineering (AI & ML)</h3>
+        <div class="edu-inst">Jeppiaar Engineering College</div>
+        <div class="edu-extra">Relevant Coursework: Machine Learning, Data Structures, Artificial Intelligence</div>
+      </div>
+      <!-- Card 2 -->
+      <div class="glass-card edu-card" onmousemove="tiltCard(event, this)" onmouseleave="resetTilt(this)">
+        <span class="edu-year">2025</span>
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <div class="edu-inst">NSVV Boys Hr. Sec. School</div>
+        <div class="edu-extra">Outstanding academic finish with a score of <span class="edu-score">91%</span></div>
+      </div>
+      <!-- Card 3 -->
+      <div class="glass-card edu-card" onmousemove="tiltCard(event, this)" onmouseleave="resetTilt(this)">
+        <span class="edu-year">2023</span>
+        <h3>Secondary School Leaving Certificate (SSLC)</h3>
+        <div class="edu-inst">NSVV Boys Hr. Sec. School</div>
+        <div class="edu-extra">Rigorous foundation completed with <span class="edu-score">88%</span></div>
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications">
-    <div class="container">
-      <h2 class="section-title">Certifications</h2>
-      <div class="cert-grid">
-        <div class="cert-card">
-          <span class="cert-company">GOOGLE</span>
-          <h3>Introduction to Generative AI</h3>
-          <p>Issued Jun 2026</p>
-          <a href="/Certificates/Introduction to Generative AI - Google.jpeg">Verify Credential →</a>
+  <section id="certifications" class="container scroll-reveal">
+    <h2 class="section-title">Professional <span>Credentials</span></h2>
+    <div class="certs-slider-outer">
+      <div class="certs-viewport">
+        <div class="certs-track" id="certs-track">
+          <!-- Slide 1 -->
+          <div class="cert-item">
+            <div class="cert-inner-card">
+              <div class="cert-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80" alt="Generative AI Demo" class="cert-img">
+              </div>
+              <div class="cert-info">
+                <h4>Google</h4>
+                <h3>Introduction to Generative AI</h3>
+                <a href="#" class="btn btn-outline" style="padding: 10px 24px; width: 100%;">Verify Credentials →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="cert-item">
+            <div class="cert-inner-card">
+              <div class="cert-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="AI & ML Demo" class="cert-img">
+              </div>
+              <div class="cert-info">
+                <h4>Infosys</h4>
+                <h3>Fundamentals of AI & Machine Learning</h3>
+                <a href="#" class="btn btn-outline" style="padding: 10px 24px; width: 100%;">Verify Credentials →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="cert-item">
+            <div class="cert-inner-card">
+              <div class="cert-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="AWS ML Demo" class="cert-img">
+              </div>
+              <div class="cert-info">
+                <h4>Amazon</h4>
+                <h3>Fundamentals of Machine Learning and Artificial Intelligence</h3>
+                <a href="#" class="btn btn-outline" style="padding: 10px 24px; width: 100%;">Verify Credentials →</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="cert-card">
-          <span class="cert-company">INFOSYS</span>
-          <h3>Fundamentals of AI & ML</h3>
-          <p>Issued Feb 2026</p>
-          <a href="/Certificates/Fundamentals Of AI&ML - Infosys.pdf">Verify Credential →</a>
-        </div>
-        <div class="cert-card">
-          <span class="cert-company">AWS</span>
-          <h3>Fundamentals of Machine Learning & AI</h3>
-          <p>Issued Feb 2026</p>
-          <a href="/Certificates/Fundamentals Of AI&ML - Amazon.pdf">Verify Credential →</a>
-        </div>
+      </div>
+      <!-- Navigation Controls -->
+      <div class="cert-nav">
+        <button class="cert-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="cert-btn" onclick="nextSlide()">&#10095;</button>
+      </div>
+      <div class="cert-dots" id="cert-dots">
+        <span class="cert-dot active" onclick="jumpToSlide(0)"></span>
+        <span class="cert-dot" onclick="jumpToSlide(1)"></span>
+        <span class="cert-dot" onclick="jumpToSlide(2)"></span>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="project-box">
-        <h2>🚀 Coming Soon</h2>
-        <p>I'm currently working on exciting projects related to Artificial Intelligence, Machine Learning and Web Development. These projects will be published here soon along with GitHub repositories, live demos and detailed documentation. Stay tuned!</p>
+  <section id="projects" class="container scroll-reveal">
+    <h2 class="section-title">Quantitative <span>Projects</span></h2>
+    <div class="proj-grid">
+      <!-- Project 1 -->
+      <div class="glass-card proj-card">
+        <div>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">Scikit-learn</span>
+            <span class="proj-tag">NLP</span>
+            <span class="proj-tag">Pandas</span>
+          </div>
+          <h3>Spam SMS Detector</h3>
+          <p>Engineered an end-to-end NLP system incorporating normalization, tokenization, and TF-IDF extraction. Evaluated multi-class predictions using Naive Bayes & Logistic Regression classifiers.</p>
+        </div>
+        <a href="#" class="proj-link">Source Code & Repository →</a>
+      </div>
+      <!-- Project 2 -->
+      <div class="glass-card proj-card">
+        <div>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">Scikit-learn</span>
+            <span class="proj-tag">Pandas</span>
+            <span class="proj-tag">EDA</span>
+          </div>
+          <h3>Customer Churn Prediction</h3>
+          <p>Built a predictive machine learning system analyzing customer behavior patterns. Implemented comprehensive pipeline engineering, feature extraction, and model cross-validation.</p>
+        </div>
+        <a href="#" class="proj-link">Source Code & Repository →</a>
+      </div>
+      <!-- Project 3 -->
+      <div class="glass-card proj-card">
+        <div>
+          <div class="proj-tags">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">Scikit-learn</span>
+            <span class="proj-tag">Pandas</span>
+            <span class="proj-tag">NumPy</span>
+          </div>
+          <h3>Credit Card Fraud Detection</h3>
+          <p>Addressed extreme class imbalances using target resampling strategies. Trained models evaluated using custom precision/recall metrics to prevent missed fraud patterns.</p>
+        </div>
+        <a href="#" class="proj-link">Source Code & Repository →</a>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span>Present</span>
-          <h3>Learning Journey</h3>
-          <p>Currently strengthening my skills in:</p>
-          <ul style="margin-top: 15px; padding-left: 20px; line-height: 2; color: #CBD5E1;">
-            <li>Python Programming</li>
-            <li>Artificial Intelligence</li>
-            <li>Machine Learning</li>
-            <li>Web Development</li>
-          </ul>
-        </div>
-        <div class="timeline-item">
-          <span>Next Goal</span>
-          <h3>Internship</h3>
-          <p>Seeking internship opportunities where I can contribute, learn from experienced professionals and gain practical industry experience. This section will be updated as my professional journey grows.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Current Focus Section -->
-  <section id="focus">
-    <div class="container">
-      <h2 class="section-title">Current Focus</h2>
-      <div class="skills-grid">
-        <div class="skill-card">🤖<br><br>Artificial Intelligence</div>
-        <div class="skill-card">🧠<br><br>Machine Learning</div>
-        <div class="skill-card">💻<br><br>Web Development</div>
-        <div class="skill-card">📚<br><br>Python Programming</div>
-        <div class="skill-card">🧩<br><br>Problem Solving</div>
-        <div class="skill-card">💼<br><br>Internship Preparation</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>📧 Email</h3>
-          <p><a href="mailto:kamalesh6764@gmail.com">kamalesh6764@gmail.com</a></p>
-        </div>
-        <div class="contact-card">
-          <h3>📱 Phone</h3>
-          <p><a href="tel:+917010486764">+91 70104 86764</a></p>
-        </div>
-        <div class="contact-card">
-          <h3>💻 GitHub</h3>
-          <p><a href="https://github.com/itzzkamalesh" target="_blank">github.com/itzzkamalesh</a></p>
-        </div>
-        <div class="contact-card">
-          <h3>💼 LinkedIn</h3>
-          <p><a href="https://www.linkedin.com/in/kamaleshram/" target="_blank">linkedin.com/in/kamaleshram</a></p>
-        </div>
+  <!-- Contact Section (Optimized layout without form) -->
+  <section id="contact" class="container scroll-reveal">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <div class="contact-wrapper">
+      <h3>Let's Collaborate</h3>
+      <p>I am looking for AI/ML internship opportunities. Please feel free to reach out via any of the direct connection options below.</p>
+      
+      <div class="contact-channels">
+        <!-- Email -->
+        <a href="mailto:kamalesh6764@gmail.com" class="glass-card contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">kamalesh6764@gmail.com</div>
+          </div>
+        </a>
+        <!-- Phone -->
+        <a href="https://wa.me/917010486764" class="glass-card contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-val">+91 70104 86764</div>
+          </div>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/kamaleshram" target="_blank" class="glass-card contact-item">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-val">linkedin.com/in/kamaleshram</div>
+          </div>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/itzzkamalesh" target="_blank" class="glass-card contact-item">
+          <div class="contact-icon">💻</div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-val">github.com/itzzkamalesh</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Kamalesh R • Built with HTML, CSS & JavaScript</p>
+    <p>© 2026 Kamalesh R • Designed with Gold & Blue Accent Matrices</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Mobile Menu Toggle
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("show");
-    }
-
-    // Close menu after clicking a link
-    document.querySelectorAll("#menu a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("menu").classList.remove("show");
-      });
-    });
-
-    // Navbar shadow while scrolling
-    window.addEventListener("scroll", () => {
-      const nav = document.querySelector("nav");
-      if (window.scrollY > 20) {
-        nav.style.boxShadow = "0 8px 20px rgba(0,0,0,.35)";
-      } else {
-        nav.style.boxShadow = "none";
-      }
-    });
-
-    // Highlight active navigation link
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("#menu a");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
