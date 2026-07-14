@@ -127,18 +127,22 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// RESUME DOWNLOAD NOTIFICATION
-const downloadBtn = document.getElementById('download-btn');
-const toast = document.getElementById('toast-notification');
+// REPLACE the previous resume notification block with this inside script.js:
+document.addEventListener('DOMContentLoaded', () => {
+  const downloadBtn = document.getElementById('download-btn');
+  const toast = document.getElementById('toast-notification');
 
-if (downloadBtn && toast) {
-  downloadBtn.addEventListener('click', () => {
-    // Show the notification
-    toast.classList.add('toast-visible');
-    
-    // Hide the notification automatically after 3 seconds (3000ms)
-    setTimeout(() => {
-      toast.classList.remove('toast-visible');
-    }, 3000);
-  });
-}
+  if (downloadBtn && toast) {
+    downloadBtn.addEventListener('click', () => {
+      // Toggle visibility class
+      toast.classList.add('toast-visible');
+      
+      // Auto-hide after 3 seconds
+      setTimeout(() => {
+        toast.classList.remove('toast-visible');
+      }, 3000);
+    });
+  } else {
+    console.warn("Could not find download button or toast elements in the DOM.");
+  }
+});
