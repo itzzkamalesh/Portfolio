@@ -1,5 +1,11 @@
 /* VARIABLES AND BRAND COLOR PALETTE */
 :root {
+  /* Add this at the very top of style.css */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
   --bg-darkest: #040508;
   --bg-dark: #090b11;
   --bg-card: rgba(15, 18, 28, 0.7);
@@ -795,10 +801,23 @@ footer p {
   }
 }
 
+/* REPLACE YOUR ENTIRE BOTTOM MEDIA QUERY BLOCK WITH THIS: */
 @media (max-width: 768px) {
+  /* Fixes the desktop navbar alignment issues on mobile viewports */
+  nav {
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    top: 0 !important;
+    padding: 15px 24px !important;
+  }
+
   .menu-toggle {
     display: block;
   }
+
   .nav-links {
     position: fixed;
     top: 80px;
@@ -812,14 +831,22 @@ footer p {
     gap: 40px;
     transition: var(--transition-smooth);
   }
+
   .nav-links.active {
     left: 0;
   }
+
   .hero-content h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem !important; /* Safely shrinks header on mobile screens */
   }
+
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  /* Disables the large background glowing circles on mobile to completely stop overflow */
+  .glow-bg {
+    display: none !important;
   }
 }
 
