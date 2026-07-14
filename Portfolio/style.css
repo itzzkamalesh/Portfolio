@@ -347,7 +347,7 @@ nav.scrolled {
 /* SKILLS INTERACTIVE CARDS */
 .skills-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Changed from 350px to 280px */
   gap: 30px;
 }
 
@@ -407,7 +407,7 @@ nav.scrolled {
 /* EDUCATION SECTION (3D Hover Cards) */
 .edu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Changed from 320px to 280px */
   gap: 30px;
   perspective: 1000px;
 }
@@ -599,7 +599,7 @@ nav.scrolled {
 /* PROJECTS ARCHITECTURE */
 .proj-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Changed from 360px to 280px */
   gap: 30px;
 }
 
@@ -848,4 +848,27 @@ footer p {
 #toast-notification.toast-visible {
   bottom: 30px; /* Slides up smoothly */
   opacity: 1;
+}
+/* Paste this block at the very bottom of style.css */
+@media (max-width: 480px) {
+  .container {
+    padding: 60px 16px; /* Slightly reduces container outer padding */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.4rem; /* Makes main heading fit cleanly on one line */
+  }
+
+  .about-metrics {
+    grid-template-columns: 1fr; /* Stacks stats vertically on small phones */
+    gap: 16px;
+  }
+
+  .cert-inner-card {
+    padding: 20px; /* Reduces padding to keep content within bounds */
+  }
+
+  .cert-img-wrapper {
+    height: 180px; /* Reduces height of the certificate image box on small screens */
+  }
 }
