@@ -822,3 +822,30 @@ footer p {
     font-size: 1.4rem;
   }
 }
+
+/* TOAST NOTIFICATION STYLING */
+#toast-notification {
+  position: fixed;
+  bottom: -100px; /* Hidden below the screen initially */
+  right: 30px;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--gold);
+  color: var(--text-main);
+  padding: 16px 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--gold-glow);
+  z-index: 2000;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Active State (Triggered by JS) */
+#toast-notification.toast-visible {
+  bottom: 30px; /* Slides up smoothly */
+  opacity: 1;
+}
