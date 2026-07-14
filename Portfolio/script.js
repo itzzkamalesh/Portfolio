@@ -126,3 +126,19 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// RESUME DOWNLOAD NOTIFICATION
+const downloadBtn = document.getElementById('download-btn');
+const toast = document.getElementById('toast-notification');
+
+if (downloadBtn && toast) {
+  downloadBtn.addEventListener('click', () => {
+    // Show the notification
+    toast.classList.add('toast-visible');
+    
+    // Hide the notification automatically after 3 seconds (3000ms)
+    setTimeout(() => {
+      toast.classList.remove('toast-visible');
+    }, 3000);
+  });
+}
