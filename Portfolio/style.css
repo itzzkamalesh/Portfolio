@@ -356,10 +356,11 @@ nav.scrolled {
 }
 
 /* Add this code block directly below .skills-category inside style.css */
+/* Replace the .skills-category:hover block in style.css with this: */
 .skills-category:hover {
   transform: translateY(-8px);
-  border-color: var(--blue-neon);
-  box-shadow: 0 15px 40px rgba(0, 240, 255, 0.15);
+  border-color: var(--gold);
+  box-shadow: 0 15px 40px var(--gold-glow); /* Uses your root golden glow variable */
 }
 
 .skills-category h3 {
