@@ -1,4 +1,4 @@
-# 🌌 Kamalesh R | AI & ML Engineer Portfolio
+# Kamalesh R | AI & ML Engineer Portfolio
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
