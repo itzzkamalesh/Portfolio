@@ -248,6 +248,8 @@ export const PORTFOLIO_DATA = {
       title: 'Fundamentals of Machine Learning and Artificial Intelligence',
       issuer: 'Amazon',
       year: '2026',
+      imagePath: '',
+      focusTopics: ['ML Pipeline Architecture', 'Model Training Concepts', 'Cloud AI Foundations'],
     },
   ] as CertificationItem[],
 
