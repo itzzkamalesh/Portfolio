@@ -421,10 +421,7 @@ export const CertificationsSlider: React.FC = () => {
               )}
             </div>
 
-            <div className="pt-3 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-[#A3A3A3]">
-              <span>Topics: {lightboxCert.focusTopics.join(' · ')}</span>
-              <span>Asset Path: public{lightboxCert.imagePath}</span>
-            </div>
+            
           </div>
         </div>
       )}
