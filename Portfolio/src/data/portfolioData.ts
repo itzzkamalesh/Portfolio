@@ -248,8 +248,6 @@ export const PORTFOLIO_DATA = {
       title: 'Fundamentals of Machine Learning and Artificial Intelligence',
       issuer: 'Amazon',
       year: '2026',
-      imagePath: '/certificate-assets/amazon-ml-ai-fundamentals-2026.png',
-      focusTopics: ['ML Pipeline Architecture', 'Model Training Concepts', 'Cloud AI Foundations'],
     },
   ] as CertificationItem[],
 
@@ -291,7 +289,7 @@ export const PORTFOLIO_DATA = {
     heading: "Let's Build Something Intelligent.",
     supportingText:
       "I'm interested in AI/ML internship opportunities, technical collaborations, and projects that turn ideas into practical solutions.",
-    email: 'kamalesh6764@gmail.com',
+    email: 'kamaleshr.dev@gmail.com',
     linkedin: 'https://linkedin.com/in/kamaleshram',
     linkedinDisplay: 'linkedin.com/in/kamaleshram',
     location: 'Chennai, Tamil Nadu, India',
