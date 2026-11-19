@@ -232,7 +232,7 @@ export const PORTFOLIO_DATA = {
       title: 'Introduction to Generative AI',
       issuer: 'Google',
       year: '2026',
-      imagePath: '',
+      imagePath: '/public/certificate-assets/google.jpeg',
       focusTopics: [],
     },
     {
@@ -240,7 +240,7 @@ export const PORTFOLIO_DATA = {
       title: 'Fundamentals of AI & Machine Learning',
       issuer: 'Infosys',
       year: '2026',
-      imagePath: '',
+      imagePath: '/public/certificate-assets/infosys.png',
       focusTopics: [],
     },
     {
@@ -248,7 +248,7 @@ export const PORTFOLIO_DATA = {
       title: 'Fundamentals of Machine Learning and Artificial Intelligence',
       issuer: 'Amazon',
       year: '2026',
-      imagePath: '',
+      imagePath: '/public/certificate-assets/amazon.png',
       focusTopics: [],
     },
   ] as CertificationItem[],
