@@ -185,8 +185,8 @@ export const PORTFOLIO_DATA = {
         'Evaluated performance using confusion matrices, precision-recall curves, and F1-score.',
       ],
       visualType: 'fraud-monitor',
-      githubUrl: '',
-      liveDemoUrl: '',
+      githubUrl: 'https://github.com/itzzkamalesh',
+      liveDemoUrl: 'https://github.com/',
     },
   ] as ProjectItem[],
 
@@ -249,7 +249,7 @@ export const PORTFOLIO_DATA = {
       issuer: 'Amazon',
       year: '2026',
       imagePath: '',
-      focusTopics: ['ML Pipeline Architecture', 'Model Training Concepts', 'Cloud AI Foundations'],
+      focusTopics: [],
     },
   ] as CertificationItem[],
 
