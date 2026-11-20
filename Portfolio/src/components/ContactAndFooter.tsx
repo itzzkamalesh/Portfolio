@@ -148,23 +148,7 @@ export const ContactAndFooter: React.FC = () => {
               </a>
             )}
 
-            <a
-              href={contact.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-              className="w-9 h-9 rounded-lg bg-[#151515] border border-white/10 hover:border-[#FF7A18] text-[#A3A3A3] hover:text-[#F5F5F5] flex items-center justify-center transition-colors"
-            >
-              <Linkedin className="w-4 h-4" />
-            </a>
-
-            <a
-              href={`mailto:${contact.email}`}
-              aria-label="Send Email"
-              className="w-9 h-9 rounded-lg bg-[#151515] border border-white/10 hover:border-[#FF7A18] text-[#A3A3A3] hover:text-[#F5F5F5] flex items-center justify-center transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-            </a>
+            
 
             <button
               type="button"
