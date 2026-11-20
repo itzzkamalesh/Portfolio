@@ -246,19 +246,36 @@ export const PORTFOLIO_DATA = {
     },
   ] as CertificationItem[],
 
-  leadership: {
-    heading: 'Beyond the Code.',
-    role: 'NSS Volunteer',
-    organization: 'NSVV Boys Higher Secondary School',
-    period: '2023–2025',
-    awardTitle: 'Best NSS Student (2025 Batch)',
-    description:
-      'Awarded "Best NSS Student" of the batch in 2025 in recognition of consistent volunteering and service.',
-    highlights: [
-      'Recognized for two years of dedicated community service and student leadership.',
-      'Coordinated school-level civic initiatives and collaborative volunteer drives.',
-    ],
-  },
+leadership: {
+  heading: 'Beyond the Code.',
+  entries: [
+    {
+      role: 'Event Coordinator',
+      organization: "SOLVIX '26 — 24-Hour Hackathon",
+      period: '2026',
+      awardTitle: 'Event Leadership & Coordination',
+      description:
+        "Served as an Event Coordinator for SOLVIX '26, a 24-hour hackathon organized by the Department of Artificial Intelligence and Machine Learning at Jeppiaar Engineering College. Contributed to event coordination, participant management, and the execution of the hackathon.",
+      highlights: [
+        'Coordinated event activities and supported the smooth execution of the 24-hour hackathon.',
+        'Worked with the organizing team to manage participants and event operations.',
+      ],
+    },
+    {
+      role: 'NSS Volunteer',
+      organization: 'NSVV Boys Higher Secondary School',
+      period: '2023–2025',
+      awardTitle: 'Best NSS Student (2025 Batch)',
+      description:
+        'Awarded "Best NSS Student" of the batch in 2025 in recognition of consistent volunteering and service.',
+      highlights: [
+        'Recognized for two years of dedicated community service and student leadership.',
+        'Coordinated school-level civic initiatives and collaborative volunteer drives.',
+      ],
+    },
+  ],
+},
+
 
   strengthsAndInterests: {
     areasOfFocus: [
