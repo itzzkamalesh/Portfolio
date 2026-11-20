@@ -38,3 +38,79 @@
   }
 }
 
+
+/* Responsive safeguards: keep the layout inside the viewport without changing desktop styling. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+html,
+body {
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  section {
+    min-width: 0;
+  }
+
+  section > div,
+  section .max-w-7xl,
+  section .max-w-3xl,
+  section .max-w-2xl {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  section .grid > *,
+  section .flex > *,
+  section article,
+  section .motion-div {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    overflow-wrap: anywhere;
+  }
+
+  #home {
+    padding-top: 6.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #home .max-w-7xl,
+  section .max-w-7xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #about,
+  #skills,
+  #projects,
+  #education,
+  #certifications,
+  #contact {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
