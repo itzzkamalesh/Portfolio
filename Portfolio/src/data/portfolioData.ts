@@ -270,7 +270,6 @@ export const PORTFOLIO_DATA = {
         'Awarded "Best NSS Student" of the batch in 2025 in recognition of consistent volunteering and service.',
       highlights: [
         'Recognized for two years of dedicated community service and student leadership.',
-        '',
       ],
     },
   ],
