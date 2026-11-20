@@ -5,6 +5,7 @@ import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export const LeadershipAndStrengthsSection: React.FC = () => {
   const { leadership, strengthsAndInterests } = PORTFOLIO_DATA;
+  const leadershipEntries = leadership.entries;
 
   return (
     <section className="py-24 border-b border-white/[0.06]">
