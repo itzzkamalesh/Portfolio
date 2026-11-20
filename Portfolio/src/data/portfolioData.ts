@@ -75,7 +75,7 @@ export const PORTFOLIO_DATA = {
   about: {
     heading: 'Turning Data Into Intelligence.',
     introduction:
-      "I'm a Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning at Jeppiaar Engineering College, Chennai. I enjoy developing machine learning models, exploring natural language processing, and solving practical problems through data-driven approaches. My experience includes building classification systems, predictive models, and data preprocessing pipelines using Python and Scikit-learn. I'm continuously learning and looking for opportunities to contribute to impactful AI/ML projects.",
+      "Great machine learning starts with asking the right questions of messy data. Pursuing my B.E. in Computer Science and Engineering (AI & ML) at Jeppiaar Engineering College, Chennai, I enjoy building end-to-end ML workflows—from data preprocessing pipelines to predictive modeling and natural language processing. Working primarily with Python and Scikit-learn, I focus on turning complex datasets into practical, accurate solutions rather than just chasing benchmark scores. I’m continuously expanding my toolkit and looking for opportunities to build meaningful AI products alongside driven teams",
     infoCards: [
       {
         label: 'Primary Focus',
