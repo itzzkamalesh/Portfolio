@@ -246,7 +246,7 @@ export const PORTFOLIO_DATA = {
     },
   ] as CertificationItem[],
 
-leadership: {
+  leadership: {
   heading: 'Beyond the Code.',
   entries: [
     {
@@ -275,8 +275,7 @@ leadership: {
     },
   ],
 },
-
-
+  
   strengthsAndInterests: {
     areasOfFocus: [
       'Artificial Intelligence',
