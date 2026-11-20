@@ -48,7 +48,7 @@ export const SkillsSection: React.FC = () => {
 
           {/* Interactive Category Filter Control */}
           <div
-            className="inline-flex items-center gap-1 p-1 bg-[#151515] border border-white/[0.08] rounded-lg self-start"
+            className="inline-flex flex-wrap items-center gap-1 p-1 bg-[#151515] border border-white/[0.08] rounded-lg self-start max-w-full"
             role="tablist"
             aria-label="Filter skills by category"
           >
