@@ -72,7 +72,7 @@ export const HeroSection: React.FC = () => {
           className="max-w-3xl space-y-6"
         >
           <div className="space-y-2">
-  <p className="font-mono text-base sm:text-lg tracking-wider text-[#FF7A18] font-medium">
+  <p className="font-mono text-lg sm:text-xl tracking-wider text-[#FF7A18] font-medium">
     {personal.name}
   </p>
   <p className="text-sm sm:text-base font-medium text-[#A3A3A3]">
