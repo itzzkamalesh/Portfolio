@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4 sm:gap-8">
         {/* Zone 1: Single text element wordmark */}
         <a
           href="#home"
