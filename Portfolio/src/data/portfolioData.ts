@@ -113,7 +113,6 @@ export const PORTFOLIO_DATA = {
       skills: [
         { name: 'Machine Learning Fundamentals', context: 'Supervised & unsupervised learning workflows' },
         { name: 'Generative AI', context: 'Foundation models & generative architectures' },
-        { name: 'AI Agents', context: 'Autonomous task reasoning & tool-use patterns' },
         { name: 'Natural Language Processing', context: 'Tokenization, normalization & TF-IDF vectorization' },
         { name: 'Predictive Analytics', context: 'Trend forecasting & risk classification' },
         { name: 'Classification Models', context: 'Logistic Regression, Naive Bayes, Decision Trees, Random Forests' },
