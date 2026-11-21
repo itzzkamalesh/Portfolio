@@ -59,14 +59,14 @@ export const ContactAndFooter: React.FC = () => {
                     <span>LinkedIn Profile</span>
                   </a>
 
-                  <button
-                    type="button"
-                    onClick={() => downloadResumePdf()}
-                    className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#F5F5F5] bg-[#0B0B0D] hover:bg-white/[0.04] border border-white/15 hover:border-[#FF7A18] rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18]"
-                  >
-                    <Download className="w-4 h-4 text-[#FF7A18]" aria-hidden="true" />
-                    <span>Download Resume</span>
-                  </button>
+                  <a
+  href="/resume.pdf"
+  download="Kamalesh_Resume.pdf"
+  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#F5F5F5] bg-[#0B0B0D] hover:bg-white/[0.04] border border-white/15 hover:border-[#FF7A18] rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18]"
+>
+  <Download className="w-4 h-4 text-[#FF7A18]" aria-hidden="true" />
+  <span>Download Resume</span>
+</a>
                 </div>
               </div>
 
