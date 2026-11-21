@@ -103,14 +103,14 @@ export const HeroSection: React.FC = () => {
               <ArrowDownRight className="w-4 h-4" aria-hidden="true" />
             </a>
 
-            <button
-              type="button"
-              onClick={() => downloadResumePdf()}
-              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#F5F5F5] bg-[#151515] hover:bg-[#1C1C1F] border border-white/15 hover:border-[#FF7A18]/60 rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18]"
-            >
-              <Download className="w-4 h-4 text-[#FF7A18]" aria-hidden="true" />
-              <span>Download Resume</span>
-            </button>
+            <a
+  href="/resume.pdf"
+  download="Kamalesh_Resume.pdf"
+  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#F5F5F5] bg-[#151515] hover:bg-[#1C1C1F] border border-white/15 hover:border-[#FF7A18]/60 rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18]"
+>
+  <Download className="w-4 h-4 text-[#FF7A18]" aria-hidden="true" />
+  <span>Download Resume</span>
+</a>
 
             <a
               href="#contact"
