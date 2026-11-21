@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         {/* Zone 3: 1 primary action on desktop + accessible mobile menu trigger */}
         <div className="flex items-center gap-3 shrink-0">
           <a
-  href="/resume.pdf"
+  href="/Kamalesh_R_Resume.pdf"
   download="Kamalesh_Resume.pdf"
   className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold text-[#0B0B0D] bg-[#FF7A18] hover:bg-[#FF8F3D] rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18]"
 >
@@ -142,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             })}
             <div className="pt-3 border-t border-white/10">
               <a
-  href="/resume.pdf"
+  href="/Kamalesh_R_Resume.pdf"
   download="Kamalesh_Resume.pdf"
   onClick={() => setMobileMenuOpen(false)}
   className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-[#0B0B0D] bg-[#FF7A18] hover:bg-[#FF8F3D] rounded-lg transition-colors"
