@@ -69,7 +69,7 @@ export const PORTFOLIO_DATA = {
       'AI Agents',
     ],
     resumeFileName: 'Kamalesh_R_Resume.pdf',
-    staticResumePath: '/Kamalesh_R_Resume.pdf',
+    staticResumePath: '/assets/resume.pdf',
   },
 
   about: {
@@ -225,7 +225,7 @@ export const PORTFOLIO_DATA = {
       title: 'Introduction to Generative AI',
       issuer: 'Google',
       year: '2026',
-      imagePath: '/certificate-assets/google.jpeg',
+      imagePath: '/assets/google.jpeg',
       focusTopics: [],
     },
     {
@@ -233,7 +233,7 @@ export const PORTFOLIO_DATA = {
       title: 'Fundamentals of AI & Machine Learning',
       issuer: 'Infosys',
       year: '2026',
-      imagePath: '/certificate-assets/infosys.png',
+      imagePath: '/assets/infosys.png',
       focusTopics: [],
     },
     {
@@ -241,7 +241,7 @@ export const PORTFOLIO_DATA = {
       title: 'Fundamentals of Machine Learning and Artificial Intelligence',
       issuer: 'Amazon',
       year: '2026',
-      imagePath: '/certificate-assets/amazon.png',
+      imagePath: '/assets/amazon.png',
       focusTopics: [],
     },
   ] as CertificationItem[],
